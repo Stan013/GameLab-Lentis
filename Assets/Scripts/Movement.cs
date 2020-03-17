@@ -47,6 +47,8 @@ public class Movement : MonoBehaviour
         forward.Normalize();
         right.Normalize();
 
+        transform.Translate(Vector3.forward * (speed * 2) * Time.deltaTime);
+
         desiredMoveDirection = forward * inputZ + right * inputX;
 
         if(blockRotationPlayer == false)
