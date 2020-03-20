@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
 
         if(blockRotationPlayer == false)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), desiredRotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection.normalized), desiredRotationSpeed);
         }
     }
 
