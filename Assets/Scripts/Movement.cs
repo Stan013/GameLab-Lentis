@@ -6,6 +6,11 @@ public class Movement : MonoBehaviour
 {
     public enum players { player1, player2, player3, player4}
     public players player;
+    public float Sadness;
+    public float Happiness;
+    public float Anxiety;
+    public float Anger;
+    public float Energy;
 
     public float inputX;
     public float inputZ;
