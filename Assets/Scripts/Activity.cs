@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Activity : MonoBehaviour
 {
     public Image filling;
+    public Image button;
     public float timeAMt = 5;
     float time;
     public float addHappy;
@@ -25,6 +26,7 @@ public class Activity : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && Input.GetButton("Fire1"))
         {
+            button.enabled = false;
             if (time <= timeAMt)
             {
                 time += Time.deltaTime;
@@ -45,15 +47,24 @@ public class Activity : MonoBehaviour
         {
             time = 0;
             filling.fillAmount = time / timeAMt;
+            button.enabled = true;
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            button.enabled = true;
+        }
+    }
     void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
             time = 0;
             filling.fillAmount = time / timeAMt;
+            button.enabled = false;
         }
     }
 }
