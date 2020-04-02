@@ -5,60 +5,44 @@ using UnityEngine.UI;
 
 public class BarDegradation : MonoBehaviour
 {
-    public float minimum = -75;
-    public float maximum = 75;
-    public float barValue = 0;
-    public bool goingUp = false;
-    public bool goingDown = false;
-    public bool stressIncreasing = false;
-    public bool stressDecreasing = false;
+    public enum bars { Sadness, Happiness, Anxiety, Anger, Energy }
+    public float minimum = -90;
+    public float maximum = 90;
+    public float barValue;
     public GameObject Pointer;
+    public GameObject playerCharacter;
+    public Transform rt;
     // Update is called once per frame
     void Start()
     {
-        goingUp = true;    
+        switch (gameObject.tag)
+        {
+            case "Sadness":
+                barValue = playerCharacter.GetComponent<Movement>().Sadness;
+                break;
+            case "Happiness":
+                barValue = playerCharacter.GetComponent<Movement>().Happiness;
+                break;
+            case "Anxiety":
+                barValue = playerCharacter.GetComponent<Movement>().Anxiety;
+                Debug.Log("Anxiety");
+                break;
+            case "Anger":
+                barValue = playerCharacter.GetComponent<Movement>().Anger;
+                break;
+            case "Energy":
+                barValue = playerCharacter.GetComponent<Movement>().Energy;
+                Debug.Log("Energy");
+                break;
+        }
+        Debug.Log(barValue);
     }
     void Update()
     {
-        if (goingUp == true && barValue != maximum && stressIncreasing == false)
+        Vector3 pos = new Vector3(barValue, rt.position.y, rt.position.z);
+        if (barValue != minimum && barValue != maximum)
         {
-            StartCoroutine("increaseStress");
-        }
-        else if (goingDown == true && barValue != minimum && stressDecreasing == false)
-        {
-            StartCoroutine("decreaseStress");
-        }
-    }
-    IEnumerator increaseStress()
-    {
-        stressIncreasing = true;
-        barValue += 1;
-        Pointer.transform.Translate(0.41f, -0, -0);
-        yield return new WaitForSeconds(0.1f);
-        if (barValue == maximum)
-        {
-            StopCoroutine("increaseStress");
-            stressIncreasing = false;
-        }
-        else
-        {
-            StartCoroutine("increaseStress");
-        }
-    }
-    IEnumerator decreaseStress()
-    {
-        stressDecreasing = true;
-        barValue -= 1;
-        Pointer.transform.Translate(-0.41f, -0, -0);
-        yield return new WaitForSeconds(0.1f);
-        if (barValue == minimum)
-        {
-            StopCoroutine("decreaseStress");
-            stressDecreasing = false;
-        }
-        else
-        {
-            StartCoroutine("decreaseStress");
+            rt.position = pos;
         }
     }
 }
