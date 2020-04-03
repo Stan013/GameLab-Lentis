@@ -88,7 +88,7 @@ public class Movement : MonoBehaviour
         {
             inputX = Input.GetAxis("HorizontalP1");
             inputZ = Input.GetAxis("VerticalP1");
-            Debug.Log("player");
+           //  Debug.Log("player");
         }
         if (player == players.player2)
         {
