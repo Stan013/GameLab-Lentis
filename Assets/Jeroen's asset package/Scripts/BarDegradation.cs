@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class BarDegradation : MonoBehaviour
 {
-    public enum bars { Sadness, Happiness, Anxiety, Anger, Energy }
     public float minimum = -90;
     public float maximum = 90;
     public float barValue;
@@ -14,6 +13,10 @@ public class BarDegradation : MonoBehaviour
     public Transform rt;
     // Update is called once per frame
     void Start()
+    {
+
+    }
+    void Update()
     {
         switch (gameObject.tag)
         {
@@ -25,24 +28,18 @@ public class BarDegradation : MonoBehaviour
                 break;
             case "Anxiety":
                 barValue = playerCharacter.GetComponent<Movement>().Anxiety;
-                Debug.Log("Anxiety");
                 break;
             case "Anger":
                 barValue = playerCharacter.GetComponent<Movement>().Anger;
                 break;
             case "Energy":
                 barValue = playerCharacter.GetComponent<Movement>().Energy;
-                Debug.Log("Energy");
                 break;
         }
-        Debug.Log(barValue);
-    }
-    void Update()
-    {
-        Vector3 pos = new Vector3(barValue, rt.position.y, rt.position.z);
-        if (barValue != minimum && barValue != maximum)
+        if (barValue <= maximum && barValue >= minimum)
         {
-            rt.position = pos;
+            Vector3 temp = new Vector3(barValue, 14f, 0f);
+            rt.transform.localPosition = temp;
         }
     }
 }
