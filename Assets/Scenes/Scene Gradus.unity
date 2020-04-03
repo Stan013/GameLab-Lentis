@@ -2190,7 +2190,7 @@ GameObject:
   - component: {fileID: 1822883269}
   - component: {fileID: 1822883273}
   m_Layer: 0
-  m_Name: mademyownp1
+  m_Name: PlayerP1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2899,8 +2899,9 @@ GameObject:
   - component: {fileID: 3909346543336546630}
   - component: {fileID: 3909346543344225938}
   - component: {fileID: 3909346543336848679}
+  - component: {fileID: 3909346543336848680}
   m_Layer: 0
-  m_Name: mademyownP3
+  m_Name: PlayerP3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2935,6 +2936,24 @@ MonoBehaviour:
   cam: {fileID: 650127825}
   controller: {fileID: 0}
   isGrounded: 0
+--- !u!143 &3909346543336848680
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909346543336848678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.69
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!1 &3909346543336848688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,8 +3517,9 @@ GameObject:
   - component: {fileID: 5974432058649861834}
   - component: {fileID: 5974432058642084126}
   - component: {fileID: 5974432058649363115}
+  - component: {fileID: 5974432058649363117}
   m_Layer: 0
-  m_Name: mademyownP4
+  m_Name: PlayerP4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3551,6 +3571,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!143 &5974432058649363117
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974432058649363114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.69
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!1 &5974432058649363120
 GameObject:
   m_ObjectHideFlags: 0
@@ -5066,8 +5104,9 @@ GameObject:
   - component: {fileID: 7079360792213613474}
   - component: {fileID: 7079360792204575862}
   - component: {fileID: 7079360792214108099}
+  - component: {fileID: 7079360792214108101}
   m_Layer: 0
-  m_Name: mademyownP2
+  m_Name: PlayerP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5119,6 +5158,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!143 &7079360792214108101
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079360792214108098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.69
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!1 &7079360792214108112
 GameObject:
   m_ObjectHideFlags: 0

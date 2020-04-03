@@ -24,7 +24,7 @@ public class Activity : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && Input.GetButton("Fire1"))
+        if (other.gameObject.name == "PlayerP1" && Input.GetButton("Fire1P1") || other.gameObject.name == "PlayerP2" && Input.GetButton("Fire1P2"))
         {
             button.enabled = false;
             if (time <= timeAMt)
