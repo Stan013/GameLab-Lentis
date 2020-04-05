@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Activity : MonoBehaviour
 {
-    public Image filling;
-    public Image button;
     public float timeAMt = 5;
     float time;
     public float addHappy;
@@ -18,19 +16,18 @@ public class Activity : MonoBehaviour
 
     private void Update()
     {
-        //  filling = this.GetComponent<Image>();
         
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name == "PlayerP1" && Input.GetButton("Fire1P1") || other.gameObject.name == "PlayerP2" && Input.GetButton("Fire1P2"))
+        if (other.gameObject.tag == "Player" && Input.GetButton(other.GetComponent<Movement>().activityButton))
         {
-            button.enabled = false;
+            other.GetComponent<Movement>().button.enabled = false;
             if (time <= timeAMt)
             {
                 time += Time.deltaTime;
-                filling.fillAmount = time / timeAMt;
+                other.gameObject.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
                 Debug.Log(time);
             }
             if(time >= timeAMt)
@@ -46,8 +43,8 @@ public class Activity : MonoBehaviour
         else
         {
             time = 0;
-            filling.fillAmount = time / timeAMt;
-            button.enabled = true;
+            other.gameObject.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
+            other.GetComponent<Movement>().button.enabled = true;
         }
     }
 
@@ -55,7 +52,7 @@ public class Activity : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            button.enabled = true;
+            other.GetComponent<Movement>().button.enabled = true;
         }
     }
     void OnTriggerExit(Collider other)
@@ -63,8 +60,8 @@ public class Activity : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             time = 0;
-            filling.fillAmount = time / timeAMt;
-            button.enabled = false;
+            other.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
+            other.GetComponent<Movement>().button.enabled = false;
         }
     }
 }
