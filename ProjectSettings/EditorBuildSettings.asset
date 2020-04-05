@@ -5,10 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene Gradus.unity
     guid: 3860ce6f69db9b14c80a0f5620d544fd
-  - enabled: 1
-    path: Assets/Scenes/Scene Jeroen.unity
-    guid: 7090a859bc21fb4468faed6d303aecf8
   m_configObjects: {}
