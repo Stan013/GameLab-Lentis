@@ -23,6 +23,10 @@ public class Activity : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && Input.GetButton(other.GetComponent<Movement>().activityButton))
         {
+            if(this.gameObject.GetComponent<Animator>().enabled == true)
+            {
+                this.gameObject.GetComponent<Animator>().SetBool("Collision", true);
+            }
             other.GetComponent<Movement>().button.enabled = false;
             if (time <= timeAMt)
             {
@@ -62,6 +66,7 @@ public class Activity : MonoBehaviour
             time = 0;
             other.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
             other.GetComponent<Movement>().button.enabled = false;
+            this.gameObject.GetComponent<Animator>().SetBool("Collision", false);
         }
     }
 }
