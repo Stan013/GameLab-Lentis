@@ -3439,7 +3439,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633424503}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7250001, y: 0, z: -2.033}
+  m_LocalPosition: {x: 0.145, y: 0, z: 0.112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1076076090}
@@ -5786,7 +5786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076076089}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -1.5900002, y: 0, z: 2.15}
+  m_LocalPosition: {x: -0.01, y: 0, z: 0.005}
   m_LocalScale: {x: 99.999985, y: 99.99997, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 633424504}
@@ -6555,7 +6555,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1939842460}
-        m_MethodName: Quit
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8734,7 +8734,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587224468}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -1.5900002, y: 0, z: 2.15}
+  m_LocalPosition: {x: -0.00999999, y: 0, z: 0.0050001144}
   m_LocalScale: {x: 99.999985, y: 99.99997, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 633424504}
@@ -13179,8 +13179,8 @@ MonoBehaviour:
   Anxiety: 0
   Anger: 0
   Energy: 0
-  button: {fileID: 0}
-  activitytimer: {fileID: 0}
+  button: {fileID: 1538860760}
+  activitytimer: {fileID: 1974287207}
   activityButton: 
   inputX: 0
   inputZ: 0
@@ -13832,8 +13832,8 @@ MonoBehaviour:
   Anxiety: 0
   Anger: 0
   Energy: 0
-  button: {fileID: 0}
-  activitytimer: {fileID: 0}
+  button: {fileID: 1105931953}
+  activitytimer: {fileID: 588741092}
   activityButton: 
   inputX: 0
   inputZ: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PauseGame : MonoBehaviour
 {
     public GameObject PausePanel;
@@ -21,7 +22,10 @@ public class PauseGame : MonoBehaviour
             timerPanel.SetActive(true);
         }
     }
-
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void Quit()
     {
         Application.Quit();
