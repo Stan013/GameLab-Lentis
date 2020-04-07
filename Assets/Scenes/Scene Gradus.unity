@@ -1377,7 +1377,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 9527
+    m_Bits: 8503
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2639,7 +2639,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 9527
+    m_Bits: 8503
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3623,7 +3623,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 9527
+    m_Bits: 8503
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3691,6 +3691,7 @@ MonoBehaviour:
   showBars: 0
   images: []
   sprites: []
+  activateButton: Fire2P1
 --- !u!114 &687475969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3908,6 +3909,7 @@ MonoBehaviour:
   showBars: 0
   images: []
   sprites: []
+  activateButton: Fire2P4
 --- !u!114 &758595232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4848,7 +4850,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 9527
+    m_Bits: 8503
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5615,6 +5617,7 @@ MonoBehaviour:
   showBars: 0
   images: []
   sprites: []
+  activateButton: Fire2P2
 --- !u!114 &1072325668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12574,6 +12577,7 @@ MonoBehaviour:
   showBars: 0
   images: []
   sprites: []
+  activateButton: Fire2P3
 --- !u!114 &2114346534
 MonoBehaviour:
   m_ObjectHideFlags: 0

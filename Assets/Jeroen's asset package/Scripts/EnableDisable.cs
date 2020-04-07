@@ -9,6 +9,7 @@ public class EnableDisable : MonoBehaviour
     public bool showBars;
     public Image[] images;
     public SpriteRenderer[] sprites;
+    public string activateButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class EnableDisable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Joystick1Button4))
+        if (Input.GetButton(activateButton))
         {
             showBars = true;
         }
