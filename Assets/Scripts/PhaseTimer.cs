@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class PhaseTimer : MonoBehaviour
 {
-    [SerializeField] private float time = 180;
-    [SerializeField] private string phase = "Prep";
-    public Text timerText;
- 
+    [SerializeField] private float time;
+    [SerializeField] private float resetTime;
+    [SerializeField] private string phase;
+    [SerializeField] private Text timerText;
+
+    [SerializeField] private GuestAI guest1;
+    [SerializeField] private GuestAI guest2;
     void Update ()
     {
+        checkPhase();
         CoundownTimer();
     }
 
@@ -20,18 +24,26 @@ public class PhaseTimer : MonoBehaviour
         string minutes = Mathf.Floor(time / 60).ToString("00");
         string seconds = (time % 60).ToString("00");
         timerText.text = (minutes + ":" + seconds);
-        Debug.Log("Time Left: " + minutes + ":" + seconds);
-        if(time <= 0)
-        {
-            if(phase == "Prep")
-            {
-                //Go to work phase
+        if(time <= 0){
+            if(phase == "Prep"){
                 phase = "Work";
             }else{
-                //Go to prep phase
                 phase = "Prep";
             }
-            time = 180;
+            time = resetTime;
+        }
+    }
+
+    void checkPhase(){
+        if(phase == "Work"){
+            //Enable guests
+            if(timerText.text == "03:00"){
+                guest1.makeOrder("Drink1");
+                guest2.makeOrder("Food1");
+            }
+        }
+        if(phase == "Prep"){
+            //Disable guests
         }
     }
 }
