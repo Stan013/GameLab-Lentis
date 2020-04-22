@@ -9,6 +9,8 @@ TagManager:
   - Anger
   - Sadness
   - Energy
+  - rightBox
+  - leftBox
   layers:
   - Default
   - TransparentFX
