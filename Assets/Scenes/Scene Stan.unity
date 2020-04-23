@@ -8072,20 +8072,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &858674729
-CapsuleCollider:
+--- !u!65 &858674729
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858674728}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.7041943
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.8593768, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 1.8, z: 1.25}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!54 &858674730
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8160,6 +8159,7 @@ MonoBehaviour:
   speed: 1
   wantOrder: 0
   canvasOrder: {fileID: 1444021956}
+  phase: {fileID: 1308196484}
   spriteDrink1: {fileID: 21300000, guid: 5c1d36b09ecaee942a73e7099b0bc77a, type: 3}
   spriteFood1: {fileID: 21300000, guid: 11467f44b32e41c43a0d20ff0a1d63c3, type: 3}
 --- !u!1 &868143539
@@ -8492,8 +8492,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &922844076
-CapsuleCollider:
+--- !u!65 &922844076
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8502,10 +8502,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.7041943
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.8593768, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 1.8, z: 1.25}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!54 &922844077
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8538,6 +8537,7 @@ MonoBehaviour:
   speed: 1
   wantOrder: 0
   canvasOrder: {fileID: 1488248542}
+  phase: {fileID: 1308196484}
   spriteDrink1: {fileID: 21300000, guid: 5c1d36b09ecaee942a73e7099b0bc77a, type: 3}
   spriteFood1: {fileID: 21300000, guid: 11467f44b32e41c43a0d20ff0a1d63c3, type: 3}
 --- !u!95 &922844079
@@ -11490,7 +11490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 210
   resetTime: 210
-  phase: Work
+  phase: Prep
   timerText: {fileID: 2136268369}
   guest1: {fileID: 858674733}
   guest2: {fileID: 922844078}
