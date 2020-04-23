@@ -7,7 +7,7 @@ public class PhaseTimer : MonoBehaviour
 {
     [SerializeField] private float time;
     [SerializeField] private float resetTime;
-    [SerializeField] private string phase;
+    public string phase;
     [SerializeField] private Text timerText;
 
     [SerializeField] private GuestAI guest1;

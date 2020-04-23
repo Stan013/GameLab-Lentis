@@ -11,7 +11,8 @@ public class GuestAI : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private bool wantOrder = false;
     [SerializeField] private Canvas canvasOrder;
-
+    [SerializeField] private PhaseTimer phase;
+    
     [SerializeField] private Sprite spriteDrink1;
     [SerializeField] private Sprite spriteFood1;
 
@@ -20,11 +21,12 @@ public class GuestAI : MonoBehaviour
     }
 
     void Update () {
-        if(currentWayPoint < wayPointList.Length)
-        {
-            if(targetWayPoint == null)
-                targetWayPoint = wayPointList[currentWayPoint];
-            Move();
+        if(phase.phase == "Work"){
+            if(currentWayPoint < wayPointList.Length){
+                if(targetWayPoint == null)
+                    targetWayPoint = wayPointList[currentWayPoint];
+                Move();
+            }
         }
         checkOrder();
     }
@@ -62,4 +64,5 @@ public class GuestAI : MonoBehaviour
             break;
         }
     }
+    
 }
