@@ -11,6 +11,7 @@ TagManager:
   - Energy
   - rightBox
   - leftBox
+  - Fish
   layers:
   - Default
   - TransparentFX

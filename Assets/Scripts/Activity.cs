@@ -12,13 +12,6 @@ public class Activity : MonoBehaviour
     public float addSad;
     public float addAnxiety;
     public float addEnergy;
-    // public Text timeText;
-
-    private void Update()
-    {
-        
-    }
-
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player" && Input.GetButton(other.GetComponent<Movement>().activityButton))
