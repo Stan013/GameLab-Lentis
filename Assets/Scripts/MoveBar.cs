@@ -9,9 +9,11 @@ public class MoveBar : MonoBehaviour
     public float height = 50f;
     public Slider slider;
     private bool hittingOjbect;
+    public GameObject panel;
+    public string button;
     private void Update()
     {
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton(button))
         {
             transform.localPosition += new Vector3(0, speed, 0f);
         }
@@ -28,7 +30,7 @@ public class MoveBar : MonoBehaviour
 
         if(slider.value == slider.maxValue)
         {
-            //Do Something
+            panel.SetActive(false);
         }
 
         if(hittingOjbect == true)
