@@ -79,14 +79,14 @@ public class firstPerson : MonoBehaviour
         {
             if (Minigame.activeInHierarchy == false)
             {
-                Instantiate(selectedFood, new Vector3(0, 0, 0), Quaternion.identity, hand);
+                GameObject Food = Instantiate(selectedFood, new Vector3(0, 0, 0), Quaternion.identity, hand);
                 if(FinalValue >= 70)
                 {
-                    Instantiate(GoodParticle, selectedFood.transform);
+                    Instantiate(GoodParticle, Food.transform);
                 }
                 else
                 {
-                    Instantiate(badParticle, selectedFood.transform);
+                    Instantiate(badParticle, Food.transform);
                 }
                 thisCam.enabled = false;
                 minigameIsPlaying = false;
