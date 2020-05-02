@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: aecc0d724ffd0dd4cae01b718f3339c1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BackDoor
+    100002: Bathtub
+    100004: Beams
+    100006: Beams 1
+    100008: Beams 2
+    100010: BedFrame
+    100012: Bedframe
+    100014: Bottle
+    100016: Cabinets
+    100018: Cake
+    100020: CakeBase
+    100022: Candles
+    100024: Chair
+    100026: Chair1
+    100028: Chair2
+    100030: Chair3
+    100032: CoffeeMachine
+    100034: CoffeePot
+    100036: DinnerTable
+    100038: Fence
+    100040: Fence1
+    100042: Fence2
+    100044: Floor
+    100046: Fridge
+    100048: Glass1
+    100050: Handle
+    100052: House 1
+    100054: //RootNode
+    100056: LeftBed
+    100058: Matras
+    100060: Matras 1
+    100062: Matras1
+    100064: Matras1 1
+    100066: Posts
+    100068: Posts 1
+    100070: Posts 2
+    100072: RightBed
+    100074: Roof
+    100076: Shower_curtain_rail
+    100078: Tank
+    100080: TankLid
+    100082: Toilet
+    100084: ToiletBase
+    100086: ToiletLid
+    100088: ToiletSeat
+    100090: Whipped_Cream
+    100092: Whipped_Cream1
+    400000: BackDoor
+    400002: Bathtub
+    400004: Beams
+    400006: Beams 1
+    400008: Beams 2
+    400010: BedFrame
+    400012: Bedframe
+    400014: Bottle
+    400016: Cabinets
+    400018: Cake
+    400020: CakeBase
+    400022: Candles
+    400024: Chair
+    400026: Chair1
+    400028: Chair2
+    400030: Chair3
+    400032: CoffeeMachine
+    400034: CoffeePot
+    400036: DinnerTable
+    400038: Fence
+    400040: Fence1
+    400042: Fence2
+    400044: Floor
+    400046: Fridge
+    400048: Glass1
+    400050: Handle
+    400052: House 1
+    400054: //RootNode
+    400056: LeftBed
+    400058: Matras
+    400060: Matras 1
+    400062: Matras1
+    400064: Matras1 1
+    400066: Posts
+    400068: Posts 1
+    400070: Posts 2
+    400072: RightBed
+    400074: Roof
+    400076: Shower_curtain_rail
+    400078: Tank
+    400080: TankLid
+    400082: Toilet
+    400084: ToiletBase
+    400086: ToiletLid
+    400088: ToiletSeat
+    400090: Whipped_Cream
+    400092: Whipped_Cream1
+    2100000: lambert1
+    2100002: lambert2
+    2100004: Glass
+    2300000: BackDoor
+    2300002: Bathtub
+    2300004: Beams
+    2300006: Beams 1
+    2300008: Beams 2
+    2300010: BedFrame
+    2300012: Bedframe
+    2300014: Bottle
+    2300016: Cabinets
+    2300018: CakeBase
+    2300020: Candles
+    2300022: Chair
+    2300024: Chair1
+    2300026: Chair2
+    2300028: Chair3
+    2300030: CoffeeMachine
+    2300032: CoffeePot
+    2300034: DinnerTable
+    2300036: Floor
+    2300038: Fridge
+    2300040: Glass1
+    2300042: Handle
+    2300044: House 1
+    2300046: Matras
+    2300048: Matras 1
+    2300050: Matras1
+    2300052: Matras1 1
+    2300054: Posts
+    2300056: Posts 1
+    2300058: Posts 2
+    2300060: Roof
+    2300062: Shower_curtain_rail
+    2300064: Tank
+    2300066: TankLid
+    2300068: ToiletBase
+    2300070: ToiletLid
+    2300072: ToiletSeat
+    2300074: Whipped_Cream
+    2300076: Whipped_Cream1
+    3300000: BackDoor
+    3300002: Bathtub
+    3300004: Beams
+    3300006: Beams 1
+    3300008: Beams 2
+    3300010: BedFrame
+    3300012: Bedframe
+    3300014: Bottle
+    3300016: Cabinets
+    3300018: CakeBase
+    3300020: Candles
+    3300022: Chair
+    3300024: Chair1
+    3300026: Chair2
+    3300028: Chair3
+    3300030: CoffeeMachine
+    3300032: CoffeePot
+    3300034: DinnerTable
+    3300036: Floor
+    3300038: Fridge
+    3300040: Glass1
+    3300042: Handle
+    3300044: House 1
+    3300046: Matras
+    3300048: Matras 1
+    3300050: Matras1
+    3300052: Matras1 1
+    3300054: Posts
+    3300056: Posts 1
+    3300058: Posts 2
+    3300060: Roof
+    3300062: Shower_curtain_rail
+    3300064: Tank
+    3300066: TankLid
+    3300068: ToiletBase
+    3300070: ToiletLid
+    3300072: ToiletSeat
+    3300074: Whipped_Cream
+    3300076: Whipped_Cream1
+    4300000: Fridge
+    4300002: DinnerTable
+    4300004: Chair1
+    4300006: Chair3
+    4300008: Chair2
+    4300010: Cabinets
+    4300012: Floor
+    4300014: House
+    4300016: CoffeePot
+    4300018: Whipped_Cream1
+    4300020: Whipped_Cream
+    4300022: Shower_curtain_rail
+    4300024: Glass1
+    4300026: Bottle
+    4300028: CoffeeMachine
+    4300030: Chair
+    4300032: Bathtub
+    4300034: BackDoor
+    4300036: Roof
+    4300038: Posts
+    4300040: Beams
+    4300042: Posts
+    4300044: Beams
+    4300046: Posts
+    4300048: Beams
+    4300050: Candles
+    4300052: CakeBase
+    4300054: BedFrame
+    4300056: Matras
+    4300058: Matras1
+    4300060: Matras1
+    4300062: Bedframe
+    4300064: Matras
+    4300066: ToiletSeat
+    4300068: ToiletLid
+    4300070: ToiletBase
+    4300072: Tank
+    4300074: Handle
+    4300076: TankLid
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 80
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
