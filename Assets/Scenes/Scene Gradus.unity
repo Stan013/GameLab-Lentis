@@ -6386,9 +6386,14 @@ MonoBehaviour:
   time: 210
   resetTime: 210
   phase: Work
+  phaseCount: 0
   timerText: {fileID: 1965849133}
   guest1: {fileID: 858578629}
   guest2: {fileID: 1276253752}
+  guest3: {fileID: 0}
+  guest4: {fileID: 0}
+  guest5: {fileID: 0}
+  guest6: {fileID: 0}
 --- !u!4 &825993956
 Transform:
   m_ObjectHideFlags: 0
@@ -6844,10 +6849,7 @@ MonoBehaviour:
   - {fileID: 1645076090}
   speed: 1
   wantOrder: 0
-  canvasOrder: {fileID: 1280141047}
   phase: {fileID: 825993955}
-  spriteDrink1: {fileID: 21300000, guid: 5c1d36b09ecaee942a73e7099b0bc77a, type: 3}
-  spriteFood1: {fileID: 21300000, guid: 11467f44b32e41c43a0d20ff0a1d63c3, type: 3}
 --- !u!4 &858578630
 Transform:
   m_ObjectHideFlags: 0
@@ -8121,8 +8123,7 @@ Transform:
   m_LocalRotation: {x: 0.32271218, y: 0.051936332, z: -0.050123684, w: 0.943741}
   m_LocalPosition: {x: 1.0710209e-10, y: 0.0021136454, z: 3.72529e-10}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1.0000001}
-  m_Children:
-  - {fileID: 1531626512}
+  m_Children: []
   m_Father: {fileID: 2125866000}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9644,10 +9645,7 @@ MonoBehaviour:
   wayPointList: []
   speed: 1
   wantOrder: 0
-  canvasOrder: {fileID: 1133722203}
   phase: {fileID: 825993955}
-  spriteDrink1: {fileID: 21300000, guid: 5c1d36b09ecaee942a73e7099b0bc77a, type: 3}
-  spriteFood1: {fileID: 21300000, guid: 11467f44b32e41c43a0d20ff0a1d63c3, type: 3}
 --- !u!95 &1276253753
 Animator:
   serializedVersion: 3
@@ -10519,6 +10517,8 @@ MonoBehaviour:
     type: 3}
   thisCam: {fileID: 1224973366}
   selectedObj: 1
+  FinalValue: 0
+  selectedFood: {fileID: 0}
 --- !u!1 &1332419859
 GameObject:
   m_ObjectHideFlags: 0
@@ -12003,36 +12003,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531163184}
   m_Mesh: {fileID: 4300000, guid: 4001854f58e3d084f9024560cb923395, type: 3}
---- !u!1 &1531626511
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1531626512}
-  m_Layer: 13
-  m_Name: Bone.011_end
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1531626512
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531626511}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.0006360715, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1038061002}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1539011223
 GameObject:
   m_ObjectHideFlags: 0
