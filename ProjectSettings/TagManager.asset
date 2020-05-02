@@ -12,6 +12,7 @@ TagManager:
   - rightBox
   - leftBox
   - Fish
+  - Selectable
   layers:
   - Default
   - TransparentFX

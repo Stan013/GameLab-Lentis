@@ -11,27 +11,15 @@ public class MoveBar : MonoBehaviour
     private bool hittingOjbect;
     public GameObject panel;
     public string button;
+
+    public float finalValue;
     private void Update()
     {
-        if (Input.GetButton(button))
-        {
-            transform.localPosition += new Vector3(0, speed, 0f);
-        }
-        else
-        {
-            transform.localPosition += new Vector3(0, -speed, 0f);
-        }
-        var pos = transform.localPosition;
-        pos.y = Mathf.Clamp(transform.localPosition.y, -73, 73f);
-        transform.localPosition = pos;
+        MoveSlider();
 
         RectTransform rt = this.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(30, height);
 
-        if(slider.value == slider.maxValue)
-        {
-            panel.SetActive(false);
-        }
 
         if(hittingOjbect == true)
         {
@@ -41,7 +29,7 @@ public class MoveBar : MonoBehaviour
         {
             slider.value -= 0.5f;
         }
-
+        StartCoroutine("Wait");
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -57,5 +45,27 @@ public class MoveBar : MonoBehaviour
             hittingOjbect = false;
         }
     }
+    void MoveSlider()
+    {
+        if (Input.GetButton(button))
+        {
+            transform.localPosition += new Vector3(0, speed, 0f);
+        }
+        else
+        {
+            transform.localPosition += new Vector3(0, -speed, 0f);
+        }
+        var pos = transform.localPosition;
+        pos.y = Mathf.Clamp(transform.localPosition.y, -73, 73f);
+        transform.localPosition = pos;
+    }
 
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(5f);
+        panel.SetActive(false);
+        finalValue = slider.value;
+        slider.value = 15;
+        yield return null;
+    }
 }
