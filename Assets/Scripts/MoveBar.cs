@@ -11,7 +11,7 @@ public class MoveBar : MonoBehaviour
     private bool hittingOjbect;
     public GameObject panel;
     public string button;
-
+    public Movement Emotions;
     public float finalValue;
     private void Update()
     {
@@ -59,7 +59,30 @@ public class MoveBar : MonoBehaviour
         pos.y = Mathf.Clamp(transform.localPosition.y, -73, 73f);
         transform.localPosition = pos;
     }
+    void Sadness()
+    {
 
+    }
+
+    void Happiness()
+    {
+
+    }
+
+    void Anxiety()
+    {
+
+    }
+
+    void Anger()
+    {
+
+    }
+
+    void Energy()
+    {
+
+    }
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(5f);
