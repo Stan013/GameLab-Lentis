@@ -9,7 +9,9 @@ public class firstPerson : MonoBehaviour
     public GameObject secondObject;
     public GameObject thirdObject;
 
+    public string selectButton;
     public string clickButton;
+    public string activateFirstPerson;
     public Transform hand;
     public GameObject Minigame;
     public GameObject GoodParticle;
@@ -18,29 +20,33 @@ public class firstPerson : MonoBehaviour
     public int selectedObj;
     public static bool IsLeft, IsRight, IsUp, IsDown;
     private float _LastX, _LastY;
-
+    private bool ActivityAvailable;
     [SerializeField] private float FinalValue;
     [SerializeField] private GameObject selectedFood;
+    [SerializeField] private Movement movement;
     private bool minigameIsPlaying;
     private void Start()
     {
       //  thisCam = gameObject.GetComponentInChildren<Camera>();
         thisCam.enabled = false;
         FinalValue = Minigame.GetComponentInChildren<MoveBar>().finalValue;
+        movement = this.GetComponent<Movement>();
     }
     private void OnTriggerStay(Collider collision)
     {
         if(collision.gameObject.tag == "Selectable")
         {
-            if (Input.GetButtonDown("activateFirstPerson"))
+            if (Input.GetButtonDown(activateFirstPerson))
             {
                 if (thisCam.isActiveAndEnabled)
                 {
                     thisCam.enabled = false;
+                    movement.enabled = true;
                 }
                 else
                 {
                     thisCam.enabled = true;
+                    movement.enabled = false;
                 }
             }
         }
@@ -48,7 +54,7 @@ public class firstPerson : MonoBehaviour
     private void Update()
     {
         FinalValue = Minigame.GetComponentInChildren<MoveBar>().finalValue;
-        float x = Input.GetAxis("DPad X");
+        float x = Input.GetAxis(selectButton);
 
 
         IsLeft = false;
@@ -77,7 +83,7 @@ public class firstPerson : MonoBehaviour
         }
         if(minigameIsPlaying == true)
         {
-            if (Minigame.activeInHierarchy == false)
+            if (Minigame.activeInHierarchy == false && hand.childCount == 0)
             {
                 GameObject Food = Instantiate(selectedFood, new Vector3(0, 0, 0), Quaternion.identity, hand);
                 if(FinalValue >= 70)
@@ -89,6 +95,7 @@ public class firstPerson : MonoBehaviour
                     Instantiate(badParticle, Food.transform);
                 }
                 thisCam.enabled = false;
+                movement.enabled = true;
                 minigameIsPlaying = false;
             }
 
