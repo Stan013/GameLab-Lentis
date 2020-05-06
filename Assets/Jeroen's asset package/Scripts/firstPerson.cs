@@ -86,6 +86,8 @@ public class firstPerson : MonoBehaviour
             if (Minigame.activeInHierarchy == false && hand.childCount == 0)
             {
                 GameObject Food = Instantiate(selectedFood, new Vector3(0, 0, 0), Quaternion.identity, hand);
+                Food.transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
+                Food.transform.localPosition = new Vector3(0, 0, 0);
                 if(FinalValue >= 70)
                 {
                     Instantiate(GoodParticle, Food.transform);
