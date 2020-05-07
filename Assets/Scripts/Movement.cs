@@ -48,6 +48,7 @@ public class Movement : MonoBehaviour
     }
     void CheckIfHoldingOrder()
     {
+        if(hand.transform.childCount >= 1)
         OrderObject = hand.transform.GetChild(0).gameObject;
     }
     void PlayerMoveAndRotation()
