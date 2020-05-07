@@ -9,7 +9,6 @@ public class GuestAI : MonoBehaviour
     private int currentWayPoint = 0; 
     Transform targetWayPoint;
     [SerializeField] private float speed;
-    [SerializeField] private bool wantOrder = false;
     [SerializeField] private PhaseTimer phase;
     
     private GameObject drink1;
@@ -19,6 +18,7 @@ public class GuestAI : MonoBehaviour
     private GameObject food2;
     private GameObject food3;
     private GameObject bubble;
+    private GameObject music;
 
     void Start(){
         bubble = GameObject.Find("Order/bubble");
@@ -31,10 +31,12 @@ public class GuestAI : MonoBehaviour
         drink3.SetActive(false);
         food1 = GameObject.Find("Order/cake");
         food1.SetActive(false);
-        food2 = GameObject.Find("Order/cake2");
+        food2 = GameObject.Find("Order/chocCake");
         food2.SetActive(false);
-        food3 = GameObject.Find("Order/cake3");
+        food3 = GameObject.Find("Order/strawberrycake");
         food3.SetActive(false);
+        music = GameObject.Find("Order/speakers");
+        music.SetActive(false);
     }
 
     void Update () {
@@ -46,7 +48,6 @@ public class GuestAI : MonoBehaviour
                 Move();
             }
         }
-        checkOrder();
     }
  
     void Move(){
@@ -59,14 +60,20 @@ public class GuestAI : MonoBehaviour
         }  
     } 
 
-    void checkOrder(){
-        if(wantOrder == true){
-            bubble.SetActive(true);
-        }
+    public void deleteOrder()
+    {
+        bubble.SetActive(false);
+        drink1.SetActive(false);
+        drink2.SetActive(false);
+        drink3.SetActive(false);
+        food1.SetActive(false);
+        food2.SetActive(false);
+        food3.SetActive(false);
+        music.SetActive(false);
     }
 
     public void makeOrder(string order){
-        wantOrder = true;
+        bubble.SetActive(true);
         switch(order){
             case "Drink1":
                 drink1.SetActive(true);
@@ -86,6 +93,36 @@ public class GuestAI : MonoBehaviour
             case "Food3":
                 food3.SetActive(true);
             break;
+            case "Music":
+                music.SetActive(true);
+            break;
         }
     }
+
+    // void OnTriggerEnter(Collider collider)
+    // {
+    //     if(Input.GetButton(collider.GetComponent<Movement>().activityButton))
+    //     {
+    //         switch(collider.){
+    //             case "coke bottle":
+
+    //             break;
+    //             case "fristi":
+
+    //             break;
+    //             case "applejuice":
+
+    //             break;
+    //             case "strawberrycake":
+
+    //             break;
+    //             case "chocCake":
+
+    //             break;
+    //             case "cake":
+
+    //             break;
+    //         }
+    //     }
+    // }
 }
