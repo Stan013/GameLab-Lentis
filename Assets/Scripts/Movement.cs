@@ -29,6 +29,9 @@ public class Movement : MonoBehaviour
     public bool isGrounded;
     private float verticalVel;
     private Vector3 moveVector;
+
+    public GameObject hand;
+    [SerializeField] private GameObject OrderObject;
     void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -40,10 +43,13 @@ public class Movement : MonoBehaviour
     {
         PlayerCheck();
         InputMagnitude();
-
+        CheckIfHoldingOrder();
 
     }
-
+    void CheckIfHoldingOrder()
+    {
+        OrderObject = hand.transform.GetChild(0).gameObject;
+    }
     void PlayerMoveAndRotation()
     {
 
