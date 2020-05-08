@@ -9,6 +9,15 @@ public class firstPerson : MonoBehaviour
     public GameObject secondObject;
     public GameObject thirdObject;
 
+    public GameObject Cakes;
+    public GameObject Drinks;
+    public GameObject drink1;
+    public GameObject drink2;
+    public GameObject drink3;
+    public GameObject food1;
+    public GameObject food2;
+    public GameObject food3;
+
     public string selectButton;
     public string clickButton;
     public string activateFirstPerson;
@@ -36,6 +45,22 @@ public class firstPerson : MonoBehaviour
     {
         if(collision.gameObject.tag == "Selectable")
         {
+            if(collision.gameObject.name == "Cakes")
+            {
+                Cakes.gameObject.SetActive(true);
+                Drinks.gameObject.SetActive(false);
+                firstObject = food1;
+                secondObject = food2;
+                thirdObject = food3;
+            }
+            else
+            {
+                Cakes.gameObject.SetActive(false);
+                Drinks.gameObject.SetActive(true);
+                firstObject = drink1;
+                secondObject = drink2;
+                thirdObject = drink3;
+            }
             if (Input.GetButtonDown(activateFirstPerson))
             {
                 if (thisCam.isActiveAndEnabled)
