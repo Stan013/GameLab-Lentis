@@ -112,15 +112,20 @@ public class GuestAI : MonoBehaviour
     {
         if(Input.GetButton(collider.GetComponent<Movement>().activityButton))
         {
-            if(orderWanted == collider.GetComponent<Movement>().OrderObject)
+            if(orderWanted.name == collider.GetComponent<Movement>().OrderObject.name)
             {
+                //check quality of order not sure which variable defines the quality
+                //add points based on quality
+                collider.GetComponent<Movement>().OrderObject.Destroy();
                 Debug.Log("Thank you");
             }else{
                 if(musicOn == true)
                 {
                     Debug.Log("Thank you for music");
+                    //add points
                 }else{
                     Debug.Log("Wrong order");
+                    //text or image that says wrong order
                 }
             }
         }
