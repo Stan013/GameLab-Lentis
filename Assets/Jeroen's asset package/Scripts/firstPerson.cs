@@ -116,6 +116,7 @@ public class firstPerson : MonoBehaviour
                 if(FinalValue >= 70)
                 {
                     Instantiate(GoodParticle, Food.transform);
+                    movement.PlayerScore += 1;
                 }
                 else
                 {

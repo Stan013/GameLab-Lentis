@@ -29,6 +29,7 @@ public class Movement : MonoBehaviour
     public bool isGrounded;
     private float verticalVel;
     private Vector3 moveVector;
+    public int PlayerScore;
 
     public GameObject hand;
     [SerializeField] private GameObject OrderObject;
