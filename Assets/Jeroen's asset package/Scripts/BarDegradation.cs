@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class BarDegradation : MonoBehaviour
 {
-    public float minimum = -90;
-    public float maximum = 90;
+    public float minimum = -100;
+    public float maximum = 100;
     public float barValue;
+    public float pointerValue;
     public GameObject Pointer;
     public GameObject playerCharacter;
     public Transform rt;
@@ -38,7 +39,8 @@ public class BarDegradation : MonoBehaviour
         }
         if (barValue <= maximum && barValue >= minimum)
         {
-            Vector3 temp = new Vector3(barValue, 14f, 0f);
+            pointerValue = barValue * 0.9f;
+            Vector3 temp = new Vector3(pointerValue, 14f, 0f);
             rt.transform.localPosition = temp;
         }
     }
