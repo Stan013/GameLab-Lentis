@@ -10,6 +10,8 @@ public class GuestAI : MonoBehaviour
     Transform targetWayPoint;
     [SerializeField] private float speed;
     [SerializeField] private PhaseTimer phase;
+    [SerializeField] private GameObject orderWanted;
+    public bool musicOn = false;
     
     private GameObject drink1;
     private GameObject drink2;
@@ -77,52 +79,50 @@ public class GuestAI : MonoBehaviour
         switch(order){
             case "Drink1":
                 drink1.SetActive(true);
+                orderWanted = drink1;
             break;
             case "Drink2":
                 drink2.SetActive(true);
+                orderWanted = drink2;
             break;
             case "Drink3":
                 drink3.SetActive(true);
+                orderWanted = drink3;
             break;
             case "Food1":
                 food1.SetActive(true);
+                orderWanted = food1;
             break;
             case "Food2":
                 food2.SetActive(true);
+                orderWanted = food2;
             break;
             case "Food3":
                 food3.SetActive(true);
+                orderWanted = food3;
             break;
             case "Music":
                 music.SetActive(true);
+                orderWanted = music;
             break;
         }
     }
 
-    // void OnTriggerEnter(Collider collider)
-    // {
-    //     if(Input.GetButton(collider.GetComponent<Movement>().activityButton))
-    //     {
-    //         switch(collider.){
-    //             case "coke bottle":
-
-    //             break;
-    //             case "fristi":
-
-    //             break;
-    //             case "applejuice":
-
-    //             break;
-    //             case "strawberrycake":
-
-    //             break;
-    //             case "chocCake":
-
-    //             break;
-    //             case "cake":
-
-    //             break;
-    //         }
-    //     }
-    // }
+    void OnTriggerEnter(Collider collider)
+    {
+        if(Input.GetButton(collider.GetComponent<Movement>().activityButton))
+        {
+            if(orderWanted == collider.GetComponent<Movement>().OrderObject)
+            {
+                Debug.Log("Thank you");
+            }else{
+                if(musicOn == true)
+                {
+                    Debug.Log("Thank you for music");
+                }else{
+                    Debug.Log("Wrong order");
+                }
+            }
+        }
+    }
 }

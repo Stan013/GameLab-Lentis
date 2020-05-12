@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
     public int PlayerScore;
 
     public GameObject hand;
-    [SerializeField] private GameObject OrderObject;
+    public GameObject OrderObject;
     void Start()
     {
         anim = this.GetComponent<Animator>();
