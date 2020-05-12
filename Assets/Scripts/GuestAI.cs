@@ -108,24 +108,32 @@ public class GuestAI : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerStay(Collider collider)
     {
-        if(Input.GetButton(collider.GetComponent<Movement>().activityButton))
+        if (collider.gameObject.tag == "Player")
         {
-            if(orderWanted.name == collider.GetComponent<Movement>().OrderObject.name)
+            Debug.Log("Cool");
+            if (Input.GetButton(collider.GetComponent<Movement>().activityButton))
             {
-                //check quality of order not sure which variable defines the quality
-                //add points based on quality
-                Destroy(collider.GetComponent<Movement>().OrderObject);
-                Debug.Log("Thank you");
-            }else{
-                if(musicOn == true)
+                if (orderWanted.name +("(Clone)") == collider.GetComponent<Movement>().OrderObject.name)
                 {
-                    Debug.Log("Thank you for music");
-                    //add points
-                }else{
-                    Debug.Log("Wrong order");
-                    //text or image that says wrong order
+                    //check quality of order not sure which variable defines the quality
+                    //add points based on quality
+                    Destroy(collider.GetComponent<Movement>().OrderObject);
+                    Debug.Log("Thank you");
+                }
+                else
+                {
+                    if (musicOn == true)
+                    {
+                        Debug.Log("Thank you for music");
+                        //add points
+                    }
+                    else
+                    {
+                        Debug.Log("Wrong order");
+                        //text or image that says wrong order
+                    }
                 }
             }
         }
