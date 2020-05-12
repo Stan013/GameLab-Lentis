@@ -116,7 +116,7 @@ public class GuestAI : MonoBehaviour
             {
                 //check quality of order not sure which variable defines the quality
                 //add points based on quality
-                collider.GetComponent<Movement>().OrderObject.Destroy();
+                Destroy(collider.GetComponent<Movement>().OrderObject);
                 Debug.Log("Thank you");
             }else{
                 if(musicOn == true)
