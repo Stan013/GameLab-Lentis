@@ -121,6 +121,7 @@ public class GuestAI : MonoBehaviour
                     //add points based on quality
                     Destroy(collider.GetComponent<Movement>().OrderObject);
                     Debug.Log("Thank you");
+                    collider.GetComponent<Movement>().PlayerScore += 1;
                 }
                 else
                 {

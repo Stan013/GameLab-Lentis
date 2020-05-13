@@ -864,7 +864,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_Name
-      value: GlassofFristi
+      value: fristi
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14012,7 +14012,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_Name
-      value: GlassofApplejuice
+      value: applejuice
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28903,7 +28903,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_Name
-      value: GlassofCoke
+      value: coke bottle
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalPosition.x
