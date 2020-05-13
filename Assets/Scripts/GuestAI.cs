@@ -117,23 +117,24 @@ public class GuestAI : MonoBehaviour
             {
                 if (orderWanted.name +("(Clone)") == collider.GetComponent<Movement>().OrderObject.name)
                 {
-                    //check quality of order not sure which variable defines the quality
-                    //add points based on quality
-                    Destroy(collider.GetComponent<Movement>().OrderObject);
-                    Debug.Log("Thank you");
                     collider.GetComponent<Movement>().PlayerScore += 1;
+                    if(collider.GetComponent<firstPerson>().orderQuality == "Good")
+                    {
+                        collider.GetComponent<Movement>().PlayerScore += 1;
+                    }
+                    Destroy(collider.GetComponent<Movement>().OrderObject);
                 }
                 else
                 {
-                    if (musicOn == true)
+                    if(musicOn == true)
                     {
-                        Debug.Log("Thank you for music");
-                        //add points
-                    }
-                    else
-                    {
+                        collider.GetComponent<Movement>().PlayerScore += 1;
+                        if (collider.GetComponent<firstPerson>().orderQuality == "Good")
+                        {
+                            collider.GetComponent<Movement>().PlayerScore += 1;
+                        }
+                    }else{
                         Debug.Log("Wrong order");
-                        //text or image that says wrong order
                     }
                 }
             }

@@ -944,6 +944,7 @@ MonoBehaviour:
   minimum: -10
   maximum: 10
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 753524053}
   playerCharacter: {fileID: 108299495}
   rt: {fileID: 753524054}
@@ -2337,6 +2338,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1933630892}
   playerCharacter: {fileID: 1545232929}
   rt: {fileID: 1933630893}
@@ -2607,6 +2609,14 @@ MonoBehaviour:
   firstObject: {fileID: 1273187574}
   secondObject: {fileID: 1721818585}
   thirdObject: {fileID: 990470618}
+  Cakes: {fileID: 0}
+  Drinks: {fileID: 0}
+  drink1: {fileID: 0}
+  drink2: {fileID: 0}
+  drink3: {fileID: 0}
+  food1: {fileID: 0}
+  food2: {fileID: 0}
+  food3: {fileID: 0}
   selectButton: HorizontalP1
   clickButton: Fire1P1
   activateFirstPerson: activateFirstPersonP1
@@ -2621,6 +2631,7 @@ MonoBehaviour:
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
+  orderQuality: 
 --- !u!54 &108299498
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2701,6 +2712,7 @@ MonoBehaviour:
   cam: {fileID: 1995011660}
   controller: {fileID: 0}
   isGrounded: 0
+  PlayerScore: 0
   hand: {fileID: 1383852149}
   OrderObject: {fileID: 0}
 --- !u!95 &108299502
@@ -3527,6 +3539,7 @@ MonoBehaviour:
   minimum: -10
   maximum: 10
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1523723372}
   playerCharacter: {fileID: 108299495}
   rt: {fileID: 1523723373}
@@ -4702,6 +4715,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1841143225}
   playerCharacter: {fileID: 1545232929}
   rt: {fileID: 1841143226}
@@ -4795,6 +4809,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 779536095}
   playerCharacter: {fileID: 1545232929}
   rt: {fileID: 779536096}
@@ -5254,6 +5269,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 481238872}
   playerCharacter: {fileID: 1545232929}
   rt: {fileID: 481238873}
@@ -7553,6 +7569,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1491274595}
   playerCharacter: {fileID: 1818984624}
   rt: {fileID: 1491274596}
@@ -7851,6 +7868,8 @@ MonoBehaviour:
   - {fileID: 720972640}
   speed: 1
   phase: {fileID: 1958559360}
+  orderWanted: {fileID: 0}
+  musicOn: 0
 --- !u!4 &450801447
 Transform:
   m_ObjectHideFlags: 0
@@ -10771,6 +10790,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1976498766}
   playerCharacter: {fileID: 1940076211}
   rt: {fileID: 1976498767}
@@ -11222,6 +11242,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 186919446}
   playerCharacter: {fileID: 1818984624}
   rt: {fileID: 186919447}
@@ -15422,6 +15443,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 2004441065}
   playerCharacter: {fileID: 1818984624}
   rt: {fileID: 2004441066}
@@ -16047,6 +16069,8 @@ MonoBehaviour:
   - {fileID: 2029041561}
   speed: 1
   phase: {fileID: 1958559360}
+  orderWanted: {fileID: 0}
+  musicOn: 0
 --- !u!4 &974849329
 Transform:
   m_ObjectHideFlags: 0
@@ -18341,6 +18365,7 @@ MonoBehaviour:
   minimum: -10
   maximum: 10
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1755461299}
   playerCharacter: {fileID: 108299495}
   rt: {fileID: 1755461300}
@@ -19213,6 +19238,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 10
+  pointerValue: 0
   Pointer: {fileID: 696658688}
   playerCharacter: {fileID: 108299495}
   rt: {fileID: 696658689}
@@ -19366,6 +19392,7 @@ MonoBehaviour:
   minimum: -10
   maximum: 10
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 736921665}
   playerCharacter: {fileID: 108299495}
   rt: {fileID: 736921666}
@@ -19459,6 +19486,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 106255814}
   playerCharacter: {fileID: 1545232929}
   rt: {fileID: 106255815}
@@ -20368,6 +20396,8 @@ MonoBehaviour:
   - {fileID: 1339269437}
   speed: 1
   phase: {fileID: 1958559360}
+  orderWanted: {fileID: 0}
+  musicOn: 0
 --- !u!4 &1234313849
 Transform:
   m_ObjectHideFlags: 0
@@ -21991,6 +22021,8 @@ MonoBehaviour:
   - {fileID: 171943994}
   speed: 1
   phase: {fileID: 1958559360}
+  orderWanted: {fileID: 0}
+  musicOn: 0
 --- !u!4 &1344085374
 Transform:
   m_ObjectHideFlags: 0
@@ -22289,75 +22321,6 @@ Transform:
   m_Father: {fileID: 570646076}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1357968125
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 100000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_Name
-      value: FrontDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000005236168
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7660445
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.00000006240224
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6427876
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_RootOrder
-      value: 51
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 82
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 82
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 82
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c2f07469d36a8994888043bcbb8e1f3f, type: 3}
 --- !u!1 &1361229453
 GameObject:
   m_ObjectHideFlags: 0
@@ -22725,6 +22688,8 @@ MonoBehaviour:
   - {fileID: 843077667}
   speed: 1
   phase: {fileID: 1958559360}
+  orderWanted: {fileID: 0}
+  musicOn: 0
 --- !u!4 &1395466129
 Transform:
   m_ObjectHideFlags: 0
@@ -23158,6 +23123,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1327905279}
   playerCharacter: {fileID: 1940076211}
   rt: {fileID: 1327905280}
@@ -25698,6 +25664,14 @@ MonoBehaviour:
   firstObject: {fileID: 1233151226}
   secondObject: {fileID: 117678843}
   thirdObject: {fileID: 1344804267}
+  Cakes: {fileID: 0}
+  Drinks: {fileID: 0}
+  drink1: {fileID: 0}
+  drink2: {fileID: 0}
+  drink3: {fileID: 0}
+  food1: {fileID: 0}
+  food2: {fileID: 0}
+  food3: {fileID: 0}
   selectButton: HorizontalP4
   clickButton: Fire1P4
   activateFirstPerson: activateFirstPersonP4
@@ -25712,6 +25686,7 @@ MonoBehaviour:
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
+  orderQuality: 
 --- !u!54 &1545232931
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25792,6 +25767,7 @@ MonoBehaviour:
   cam: {fileID: 1995011660}
   controller: {fileID: 0}
   isGrounded: 0
+  PlayerScore: 0
   hand: {fileID: 268781050}
   OrderObject: {fileID: 0}
 --- !u!95 &1545232935
@@ -29383,6 +29359,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 787234943}
   playerCharacter: {fileID: 1940076211}
   rt: {fileID: 787234944}
@@ -29779,6 +29756,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 2003304205}
   playerCharacter: {fileID: 1940076211}
   rt: {fileID: 2003304206}
@@ -30526,6 +30504,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1479163878}
   playerCharacter: {fileID: 1818984624}
   rt: {fileID: 1479163879}
@@ -30833,6 +30812,14 @@ MonoBehaviour:
   firstObject: {fileID: 1644045493}
   secondObject: {fileID: 1237240373}
   thirdObject: {fileID: 1933559069}
+  Cakes: {fileID: 0}
+  Drinks: {fileID: 0}
+  drink1: {fileID: 0}
+  drink2: {fileID: 0}
+  drink3: {fileID: 0}
+  food1: {fileID: 0}
+  food2: {fileID: 0}
+  food3: {fileID: 0}
   selectButton: HorizontalP2
   clickButton: Fire1P2
   activateFirstPerson: activateFirstPersonP2
@@ -30847,6 +30834,7 @@ MonoBehaviour:
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
+  orderQuality: 
 --- !u!136 &1818984626
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -30927,6 +30915,7 @@ MonoBehaviour:
   cam: {fileID: 1978833769}
   controller: {fileID: 0}
   isGrounded: 0
+  PlayerScore: 0
   hand: {fileID: 1213403499}
   OrderObject: {fileID: 0}
 --- !u!95 &1818984630
@@ -31267,6 +31256,8 @@ MonoBehaviour:
   - {fileID: 1852557092}
   speed: 1
   phase: {fileID: 1958559360}
+  orderWanted: {fileID: 0}
+  musicOn: 0
 --- !u!4 &1829274307
 Transform:
   m_ObjectHideFlags: 0
@@ -33010,6 +33001,14 @@ MonoBehaviour:
   firstObject: {fileID: 1930582934}
   secondObject: {fileID: 757745030}
   thirdObject: {fileID: 1788095516}
+  Cakes: {fileID: 0}
+  Drinks: {fileID: 0}
+  drink1: {fileID: 0}
+  drink2: {fileID: 0}
+  drink3: {fileID: 0}
+  food1: {fileID: 0}
+  food2: {fileID: 0}
+  food3: {fileID: 0}
   selectButton: HorizontalP3
   clickButton: Fire1P3
   activateFirstPerson: activateFirstPersonP3
@@ -33024,6 +33023,7 @@ MonoBehaviour:
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
+  orderQuality: 
 --- !u!54 &1940076214
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33104,6 +33104,7 @@ MonoBehaviour:
   cam: {fileID: 1583674431}
   controller: {fileID: 0}
   isGrounded: 0
+  PlayerScore: 0
   hand: {fileID: 1700872719}
   OrderObject: {fileID: 0}
 --- !u!95 &1940076218
@@ -33988,6 +33989,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 357323469}
   playerCharacter: {fileID: 1818984624}
   rt: {fileID: 357323470}
@@ -34127,6 +34129,8 @@ MonoBehaviour:
   - {fileID: 594299627}
   speed: 1
   phase: {fileID: 1958559360}
+  orderWanted: {fileID: 0}
+  musicOn: 0
 --- !u!4 &1975300700
 Transform:
   m_ObjectHideFlags: 0
@@ -34413,6 +34417,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 473615694}
   playerCharacter: {fileID: 1940076211}
   rt: {fileID: 473615695}
@@ -36460,6 +36465,8 @@ MonoBehaviour:
   - {fileID: 713783801}
   speed: 1
   phase: {fileID: 1958559360}
+  orderWanted: {fileID: 0}
+  musicOn: 0
 --- !u!4 &2138419224
 Transform:
   m_ObjectHideFlags: 0
