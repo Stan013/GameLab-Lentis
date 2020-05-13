@@ -34,6 +34,8 @@ public class firstPerson : MonoBehaviour
     [SerializeField] private GameObject selectedFood;
     [SerializeField] private Movement movement;
     private bool minigameIsPlaying;
+    public string orderQuality;
+
     private void Start()
     {
       //  thisCam = gameObject.GetComponentInChildren<Camera>();
@@ -116,10 +118,12 @@ public class firstPerson : MonoBehaviour
                 if(FinalValue >= 70)
                 {
                     Instantiate(GoodParticle, Food.transform);
+                    orderQuality = "Good";
                 }
                 else
                 {
                     Instantiate(badParticle, Food.transform);
+                    orderQuality = "Bad";
                 }
                 thisCam.enabled = false;
                 movement.enabled = true;
