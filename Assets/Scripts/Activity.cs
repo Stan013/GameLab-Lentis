@@ -21,7 +21,7 @@ public class Activity : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && Input.GetButton(other.GetComponent<Movement>().activityButton) && amountOfPlayers == maxPlayers)
         {
-            if (this.gameObject.GetComponent<Animator>().enabled == true)
+            if (this.gameObject.GetComponent<Animator>() != null && this.gameObject.GetComponent<Animator>().enabled == true)
             {
                 this.gameObject.GetComponent<Animator>().SetBool("Collision", true);
             }
@@ -71,9 +71,9 @@ public class Activity : MonoBehaviour
             time = 0;
             other.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
             other.GetComponent<Movement>().button.enabled = false;
-            if (this.gameObject.GetComponent<Animator>().enabled == true)
+            if (this.gameObject.GetComponent<Animator>() != null && this.gameObject.GetComponent<Animator>().enabled == true)
             {
-                this.gameObject.GetComponent<Animator>().SetBool("Collision", false);
+               this.gameObject.GetComponent<Animator>().SetBool("Collision", false);
             }
            
         }
