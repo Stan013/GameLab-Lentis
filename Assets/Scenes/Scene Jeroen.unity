@@ -200,6 +200,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1419926754}
   playerCharacter: {fileID: 572281699}
   rt: {fileID: 1419926755}
@@ -331,63 +332,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &22058297
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 100004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_Name
-      value: House1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.014283091
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -58.19168
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
 --- !u!1 &69994478
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +471,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1516963287}
   playerCharacter: {fileID: 1694304211}
   rt: {fileID: 1516963288}
@@ -1003,7 +948,7 @@ RectTransform:
   - {fileID: 1591327754}
   - {fileID: 2116900584}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1166,7 +1111,7 @@ Transform:
   m_Children:
   - {fileID: 1850452708}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &229783175
 MonoBehaviour:
@@ -1350,26 +1295,6 @@ Transform:
   m_Father: {fileID: 2074005281}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &265334559 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 88c57e6c8bf984948a4b393961e30491,
-    type: 3}
-  m_PrefabInstance: {fileID: 22058297}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &265334561
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 265334559}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
 --- !u!1 &294101688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1481,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 574223832}
   playerCharacter: {fileID: 572281699}
   rt: {fileID: 574223833}
@@ -1796,6 +1722,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 369796219}
   playerCharacter: {fileID: 572281699}
   rt: {fileID: 369796220}
@@ -2129,6 +2056,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 701682031}
   playerCharacter: {fileID: 1944696933}
   rt: {fileID: 701682032}
@@ -2487,7 +2415,17 @@ MonoBehaviour:
   firstObject: {fileID: 807358269}
   secondObject: {fileID: 2086582960}
   thirdObject: {fileID: 238563173}
+  Cakes: {fileID: 0}
+  Drinks: {fileID: 0}
+  drink1: {fileID: 0}
+  drink2: {fileID: 0}
+  drink3: {fileID: 0}
+  food1: {fileID: 0}
+  food2: {fileID: 0}
+  food3: {fileID: 0}
+  selectButton: 
   clickButton: 
+  activateFirstPerson: 
   hand: {fileID: 0}
   Minigame: {fileID: 0}
   GoodParticle: {fileID: 0}
@@ -2496,6 +2434,8 @@ MonoBehaviour:
   selectedObj: 1
   FinalValue: 0
   selectedFood: {fileID: 0}
+  movement: {fileID: 0}
+  orderQuality: 
 --- !u!4 &436817429
 Transform:
   m_ObjectHideFlags: 0
@@ -2514,7 +2454,7 @@ Transform:
   - {fileID: 1636480298}
   - {fileID: 2086582964}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &438971856
 GameObject:
@@ -2695,6 +2635,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 764743086}
   playerCharacter: {fileID: 1944696933}
   rt: {fileID: 764743087}
@@ -2941,6 +2882,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 921402160}
   playerCharacter: {fileID: 1944696933}
   rt: {fileID: 921402161}
@@ -3093,7 +3035,7 @@ RectTransform:
   - {fileID: 16566703}
   - {fileID: 342741911}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3230,6 +3172,9 @@ MonoBehaviour:
   cam: {fileID: 776767843}
   controller: {fileID: 0}
   isGrounded: 0
+  PlayerScore: 0
+  hand: {fileID: 0}
+  OrderObject: {fileID: 0}
 --- !u!95 &548946705
 Animator:
   serializedVersion: 3
@@ -3264,7 +3209,7 @@ Transform:
   - {fileID: 435242761}
   - {fileID: 420810523}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &549863916
 GameObject:
@@ -3410,6 +3355,9 @@ MonoBehaviour:
   cam: {fileID: 1850452706}
   controller: {fileID: 0}
   isGrounded: 0
+  PlayerScore: 0
+  hand: {fileID: 0}
+  OrderObject: {fileID: 0}
 --- !u!95 &572281701
 Animator:
   serializedVersion: 3
@@ -3444,7 +3392,7 @@ Transform:
   - {fileID: 584274975}
   - {fileID: 899685459}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574223832
 GameObject:
@@ -3783,6 +3731,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 444435066}
   playerCharacter: {fileID: 548946702}
   rt: {fileID: 444435067}
@@ -4033,7 +3982,7 @@ Transform:
   m_Children:
   - {fileID: 1340303002}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &667042404
 GameObject:
@@ -4149,7 +4098,7 @@ RectTransform:
   - {fileID: 1817715094}
   - {fileID: 603527065}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4434,26 +4383,6 @@ Transform:
   m_Father: {fileID: 643309743}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &708625694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: 88c57e6c8bf984948a4b393961e30491,
-    type: 3}
-  m_PrefabInstance: {fileID: 22058297}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &708625696
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708625694}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: 88c57e6c8bf984948a4b393961e30491, type: 3}
 --- !u!1 &713865755
 GameObject:
   m_ObjectHideFlags: 0
@@ -4514,7 +4443,7 @@ Transform:
   m_Children:
   - {fileID: 776767846}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &716834388
 MonoBehaviour:
@@ -5103,6 +5032,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1050438668}
   playerCharacter: {fileID: 1944696933}
   rt: {fileID: 1050438669}
@@ -5451,6 +5381,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67c428b190be354c84be72adc7a87ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPlayers: 1
+  amountOfPlayers: 0
+  targets: []
   timeAMt: 5
   addHappy: 1
   addAnger: -1
@@ -5541,7 +5474,7 @@ Transform:
   m_Children:
   - {fileID: 1920987689}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &879896237
 GameObject:
@@ -5805,6 +5738,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 585746821}
   playerCharacter: {fileID: 572281699}
   rt: {fileID: 585746822}
@@ -6440,7 +6374,7 @@ Transform:
   m_LocalScale: {x: 2.9365, y: 2.9365, z: 2.9365}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1048444191
 GameObject:
@@ -7006,6 +6940,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1037038823}
   playerCharacter: {fileID: 1694304211}
   rt: {fileID: 1037038824}
@@ -7129,6 +7064,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 827243221}
   playerCharacter: {fileID: 1944696933}
   rt: {fileID: 827243222}
@@ -7437,7 +7373,7 @@ RectTransform:
   - {fileID: 505024281}
   - {fileID: 828302534}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8358,7 +8294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1456553843
 GameObject:
@@ -8446,6 +8382,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1930853056}
   playerCharacter: {fileID: 548946702}
   rt: {fileID: 1930853057}
@@ -8600,6 +8537,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 879896237}
   playerCharacter: {fileID: 548946702}
   rt: {fileID: 879896238}
@@ -8777,6 +8715,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1342571133}
   playerCharacter: {fileID: 548946702}
   rt: {fileID: 1342571134}
@@ -9199,6 +9138,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 1663102718}
   playerCharacter: {fileID: 1694304211}
   rt: {fileID: 1663102719}
@@ -9323,6 +9263,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 21148289}
   playerCharacter: {fileID: 1694304211}
   rt: {fileID: 21148290}
@@ -9841,6 +9782,9 @@ MonoBehaviour:
   cam: {fileID: 698659487}
   controller: {fileID: 0}
   isGrounded: 0
+  PlayerScore: 0
+  hand: {fileID: 0}
+  OrderObject: {fileID: 0}
 --- !u!95 &1694304213
 Animator:
   serializedVersion: 3
@@ -9875,7 +9819,7 @@ Transform:
   - {fileID: 1140024302}
   - {fileID: 861943124}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708133579
 GameObject:
@@ -10360,6 +10304,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 870278856}
   playerCharacter: {fileID: 548946702}
   rt: {fileID: 870278857}
@@ -11169,7 +11114,7 @@ Transform:
   m_Children:
   - {fileID: 698659489}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1936707324
 MonoBehaviour:
@@ -11249,6 +11194,9 @@ MonoBehaviour:
   cam: {fileID: 776767843}
   controller: {fileID: 0}
   isGrounded: 0
+  PlayerScore: 0
+  hand: {fileID: 0}
+  OrderObject: {fileID: 0}
 --- !u!95 &1944696935
 Animator:
   serializedVersion: 3
@@ -11283,7 +11231,7 @@ Transform:
   - {fileID: 1005879261}
   - {fileID: 1533030309}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968424617
 GameObject:
@@ -11380,7 +11328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024760074
 GameObject:
@@ -11646,6 +11594,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 645494242}
   playerCharacter: {fileID: 572281699}
   rt: {fileID: 645494243}
@@ -11994,6 +11943,7 @@ MonoBehaviour:
   minimum: -90
   maximum: 90
   barValue: 0
+  pointerValue: 0
   Pointer: {fileID: 849224216}
   playerCharacter: {fileID: 1694304211}
   rt: {fileID: 849224217}
