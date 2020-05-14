@@ -33426,6 +33426,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaf71fce04542b4eb75a37afd5bb5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player1Score: 0
+  Player2Score: 0
+  Player3Score: 0
+  Player4Score: 0
 --- !u!4 &1994437802
 Transform:
   m_ObjectHideFlags: 0
@@ -36086,8 +36090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb14ba33f7f912468992fe8f32f6a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimum: -10
-  maximum: 10
+  minimum: -100
+  maximum: 100
   barValue: 0
   pointerValue: 0
   Pointer: {fileID: 1070179980848385073}
@@ -36180,8 +36184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb14ba33f7f912468992fe8f32f6a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimum: -90
-  maximum: 90
+  minimum: -100
+  maximum: 100
   barValue: 10
   pointerValue: 0
   Pointer: {fileID: 1070179981084896928}
@@ -36738,7 +36742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 124.399994, y: -79.3}
+  m_AnchoredPosition: {x: 111.4, y: -79.3}
   m_SizeDelta: {x: 220, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070179980859987353
@@ -37120,8 +37124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb14ba33f7f912468992fe8f32f6a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimum: -10
-  maximum: 10
+  minimum: -100
+  maximum: 100
   barValue: 0
   pointerValue: 0
   Pointer: {fileID: 1070179981827923761}
@@ -37242,8 +37246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb14ba33f7f912468992fe8f32f6a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimum: -10
-  maximum: 10
+  minimum: -100
+  maximum: 100
   barValue: 0
   pointerValue: 0
   Pointer: {fileID: 1070179980965363208}
@@ -37484,8 +37488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb14ba33f7f912468992fe8f32f6a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimum: -10
-  maximum: 10
+  minimum: -100
+  maximum: 100
   barValue: 0
   pointerValue: 0
   Pointer: {fileID: 1070179980394289188}
