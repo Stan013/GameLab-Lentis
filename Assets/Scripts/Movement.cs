@@ -7,11 +7,11 @@ public class Movement : MonoBehaviour
 {
     public enum players { player1, player2, player3, player4}
     public players player;
-    public float Sadness;
-    public float Happiness;
-    public float Anxiety;
-    public float Anger;
-    public float Energy;
+    [Range(-100, 100)] public float Sadness;
+    [Range(-100, 100)] public float Happiness;
+    [Range(-100, 100)] public float Anxiety;
+    [Range(-100, 100)] public float Anger;
+    [Range(-100, 100)] public float Energy;
     public Image button;
     public Image activitytimer;
     public string activityButton;
@@ -45,6 +45,7 @@ public class Movement : MonoBehaviour
         PlayerCheck();
         InputMagnitude();
         CheckIfHoldingOrder();
+
 
     }
     void CheckIfHoldingOrder()

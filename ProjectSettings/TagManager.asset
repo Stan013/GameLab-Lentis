@@ -13,6 +13,7 @@ TagManager:
   - leftBox
   - Fish
   - Selectable
+  - RadioSet
   layers:
   - Default
   - TransparentFX

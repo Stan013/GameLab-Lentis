@@ -5,6 +5,12 @@ using UnityEngine.EventSystems;
 
 public class firstPerson : MonoBehaviour
 {
+    public int Happiness;
+    public int Sadness;
+    public int Anger;
+    public int Anxiety;
+    public int Energy;
+
     public GameObject firstObject;
     public GameObject secondObject;
     public GameObject thirdObject;
@@ -33,15 +39,31 @@ public class firstPerson : MonoBehaviour
     [SerializeField] private float FinalValue;
     [SerializeField] private GameObject selectedFood;
     [SerializeField] private Movement movement;
+    
     private bool minigameIsPlaying;
     public string orderQuality;
 
+    public delegate void RandomizeEmotions();
+    public List<RandomizeEmotions> randomEmotion = new List<RandomizeEmotions>();
+    private MoveBar Bar;
+    
+    void CreateList()
+    {
+       
+        randomEmotion.Add(Bar.Anger);
+        randomEmotion.Add(Bar.Anxiety);
+        randomEmotion.Add(Bar.Sadness);
+        randomEmotion.Add(Bar.Happiness);
+        randomEmotion.Add(Bar.Energy);
+    }
     private void Start()
     {
       //  thisCam = gameObject.GetComponentInChildren<Camera>();
         thisCam.enabled = false;
         FinalValue = Minigame.GetComponentInChildren<MoveBar>().finalValue;
         movement = this.GetComponent<Movement>();
+        Bar = Minigame.GetComponentInChildren<MoveBar>();
+        CreateList();
     }
     private void OnTriggerStay(Collider collision)
     {
@@ -54,6 +76,9 @@ public class firstPerson : MonoBehaviour
                 firstObject = food1;
                 secondObject = food2;
                 thirdObject = food3;
+                Anxiety = 2;
+                Happiness = -1;
+                Energy = -2;
             }
             else
             {
@@ -62,6 +87,9 @@ public class firstPerson : MonoBehaviour
                 firstObject = drink1;
                 secondObject = drink2;
                 thirdObject = drink3;
+                Anger = 2;
+                Happiness = -1;
+                Energy = -1;
             }
             if (Input.GetButtonDown(activateFirstPerson))
             {
@@ -74,6 +102,14 @@ public class firstPerson : MonoBehaviour
                 {
                     thisCam.enabled = true;
                     movement.enabled = false;
+                    for (int i = 0; i < randomEmotion.Count; i++)
+                    {
+                        firstPerson.RandomizeEmotions temp = randomEmotion[i];
+                        int randomIndex = Random.Range(i, randomEmotion.Count);
+                        randomEmotion[i] = randomEmotion[randomIndex];
+                        randomEmotion[randomIndex] = temp;
+                        randomEmotion[i]();
+                    }
                 }
             }
         }
@@ -115,7 +151,12 @@ public class firstPerson : MonoBehaviour
                 GameObject Food = Instantiate(selectedFood, new Vector3(0, 0, 0), Quaternion.identity, hand);
                 Food.transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
                 Food.transform.localPosition = new Vector3(0, 0, 0);
-                if(FinalValue >= 70)
+                movement.Happiness += Happiness;
+                movement.Sadness += Sadness;
+                movement.Anger += Anger;
+                movement.Anxiety += Anxiety;
+                movement.Energy += Energy;
+                if (FinalValue >= 70)
                 {
                     Instantiate(GoodParticle, Food.transform);
                     orderQuality = "Good";
