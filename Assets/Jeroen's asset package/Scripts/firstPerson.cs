@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class firstPerson : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class firstPerson : MonoBehaviour
     public GameObject food2;
     public GameObject food3;
 
+    public Image ButtonImg;
     public string selectButton;
     public string clickButton;
     public string activateFirstPerson;
@@ -65,10 +67,27 @@ public class firstPerson : MonoBehaviour
         Bar = Minigame.GetComponentInChildren<MoveBar>();
         CreateList();
     }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        if(collision.gameObject.tag == "Selectable")
+        {
+            ButtonImg.enabled = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Selectable")
+        {
+            ButtonImg.enabled = false;
+        }
+    }
     private void OnTriggerStay(Collider collision)
     {
         if(collision.gameObject.tag == "Selectable")
         {
+            
             if(collision.gameObject.name == "Cakes")
             {
                 Cakes.gameObject.SetActive(true);
@@ -76,9 +95,9 @@ public class firstPerson : MonoBehaviour
                 firstObject = food1;
                 secondObject = food2;
                 thirdObject = food3;
-                Anxiety = 2;
-                Happiness = -1;
-                Energy = -2;
+                Anxiety = 20;
+                Happiness = -10;
+                Energy = -20;
             }
             else
             {
@@ -87,9 +106,9 @@ public class firstPerson : MonoBehaviour
                 firstObject = drink1;
                 secondObject = drink2;
                 thirdObject = drink3;
-                Anger = 2;
-                Happiness = -1;
-                Energy = -1;
+                Anger = 20;
+                Happiness = -10;
+                Energy = -10;
             }
             if (Input.GetButtonDown(activateFirstPerson))
             {
@@ -104,7 +123,7 @@ public class firstPerson : MonoBehaviour
                     movement.enabled = false;
                     for (int i = 0; i < randomEmotion.Count; i++)
                     {
-                        firstPerson.RandomizeEmotions temp = randomEmotion[i];
+                        RandomizeEmotions temp = randomEmotion[i];
                         int randomIndex = Random.Range(i, randomEmotion.Count);
                         randomEmotion[i] = randomEmotion[randomIndex];
                         randomEmotion[randomIndex] = temp;

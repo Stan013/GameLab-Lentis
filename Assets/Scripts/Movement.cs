@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -33,11 +34,28 @@ public class Movement : MonoBehaviour
 
     public GameObject hand;
     public GameObject OrderObject;
+
+    private Movement playerInstance;
+    private void Awake()
+    {
+        
+        DontDestroyOnLoad(this);
+        if (playerInstance == null)
+        {
+            playerInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
+    }
     void Start()
     {
         anim = this.GetComponent<Animator>();
         controller = this.GetComponent<CharacterController>();
         PlayerCheck();
+        
     }
 
     void Update()
@@ -46,7 +64,12 @@ public class Movement : MonoBehaviour
         InputMagnitude();
         CheckIfHoldingOrder();
 
-
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Ending")
+        {
+            Destroy(this.GetComponent<firstPerson>());
+            Destroy(this.GetComponent<MusicManaging>());
+        }
     }
     void CheckIfHoldingOrder()
     {

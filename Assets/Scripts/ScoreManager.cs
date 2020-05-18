@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
-    public static int finalScore = 0;
-    public int Player1Score;
-    public int Player2Score;
-    public int Player3Score;
-    public int Player4Score;
+    public static int finalScore;
+    public static int Player1Score;
+    public static int Player2Score;
+    public static int Player3Score;
+    public static int Player4Score;
     // Start is called before the first frame update
     private static ScoreManager playerInstance;
     void Awake()
@@ -27,7 +28,6 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
-        
     }
     private void Update()
     {
@@ -43,9 +43,11 @@ public class ScoreManager : MonoBehaviour
             Player3Score = GameObject.Find("PlayerP3").GetComponent<Movement>().PlayerScore;
             Player4Score = GameObject.Find("PlayerP4").GetComponent<Movement>().PlayerScore;
         }
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Ending");
+        }
+
+        finalScore = Player1Score + Player2Score + Player3Score + Player4Score;
     }
-    // Update is called once per frame
-
-
 }

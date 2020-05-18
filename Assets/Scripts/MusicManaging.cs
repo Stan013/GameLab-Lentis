@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MusicManaging : MonoBehaviour
 {
@@ -20,9 +21,13 @@ public class MusicManaging : MonoBehaviour
     public GameObject GoodParticle;
     public GameObject badParticle;
 
+    public Image ButtonImg;
+
     [SerializeField] private Movement movement;
     private bool minigameIsPlaying = false;
     public string orderQuality;
+
+    [SerializeField]private GameObject Clone;
     void CreateList()
     {
 
@@ -55,10 +60,12 @@ public class MusicManaging : MonoBehaviour
                 if (FinalValue >= 70)
                 {
                     orderQuality = "Good";
+                    GoodParticleSpawn();
                 }
                 else
                 {
                     orderQuality = "Bad";
+                    BadParticleSpawn();
                 }
                 movement.enabled = true;
                 minigameIsPlaying = false;
@@ -66,12 +73,28 @@ public class MusicManaging : MonoBehaviour
 
         }
     }
-    private void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "RadioSet")
+        {
+            ButtonImg.enabled = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "RadioSet")
+        {
+            ButtonImg.enabled = false;
+        }
+    }
+        private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "RadioSet")
         {
             if(Input.GetButtonDown(activeMinigame))
             {
+                Destroy(Clone.gameObject);
                 minigameIsPlaying = true;
                 Minigame.SetActive(true);
                 movement.enabled = false;
@@ -84,6 +107,24 @@ public class MusicManaging : MonoBehaviour
                     randomEmotion[i]();
                 }
             }
+        }
+    }
+
+    void GoodParticleSpawn()
+    {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("RadioSet");
+        foreach (GameObject target in gameObjects)
+        {
+            Clone = Instantiate(GoodParticle, target.transform);
+        }
+    }
+
+    void BadParticleSpawn()
+    {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("RadioSet");
+        foreach (GameObject target in gameObjects)
+        {
+            Clone = Instantiate(badParticle, target.transform);
         }
     }
 }
