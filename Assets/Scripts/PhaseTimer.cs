@@ -101,10 +101,19 @@ public class PhaseTimer : MonoBehaviour
             case "WorkWave3":
                 MakeWave3();
             break;
-        }
-        if(phase == "Prep"){
-            //Disable guests
-        }
+            default:
+                if(timerText.text == "03:00"){
+                    guest1.SetActive(false);
+                    guest2.SetActive(false);
+                    guest3.SetActive(false);
+                    guest4.SetActive(false);
+                    guest5.SetActive(false);
+                    guest6.SetActive(false);
+                    guest7.SetActive(false);
+                    guest8.SetActive(false);
+                }
+            break;
+        }   
     }
 
     IEnumerator delayActive(GameObject guest, float time){

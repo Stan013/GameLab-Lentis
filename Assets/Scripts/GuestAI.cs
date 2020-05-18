@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class GuestAI : MonoBehaviour
 {
     [SerializeField] private Transform[] wayPointList;
+    [SerializeField] private Transform[] tempArray;
     private int currentWayPoint = 0; 
+    private int currentWayPoint2 = 0; 
     Transform targetWayPoint;
+    Transform targetWayPoint2;
     [SerializeField] private float speed;
     [SerializeField] private PhaseTimer phase;
     [SerializeField] private GameObject orderWanted;
@@ -43,24 +46,48 @@ public class GuestAI : MonoBehaviour
 
     void Update () {
         if(phase.phase != "Prep"){
-            if(currentWayPoint < wayPointList.Length){
-                if(targetWayPoint == null){
-                    targetWayPoint = wayPointList[currentWayPoint];
-                }
-                Move();
-            }
+            Move();
+        }else{
+            MoveBack();
         }
     }
  
     void Move(){
-        transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint.position - transform.position, 6f*Time.deltaTime, 0.0f);
-        transform.position = Vector3.MoveTowards(transform.position, targetWayPoint.position,   speed*Time.deltaTime);
-        if(transform.position == targetWayPoint.position)
-        {
-            currentWayPoint ++;
-            targetWayPoint = wayPointList[currentWayPoint];
-        }  
+        currentWayPoint2 = 0;
+        targetWayPoint2 = null;
+        if(currentWayPoint < wayPointList.Length){
+            if(targetWayPoint == null){
+                targetWayPoint = wayPointList[currentWayPoint];
+            }
+            transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint.position - transform.position, 6.0f*Time.deltaTime, 0.0f);
+            transform.position = Vector3.MoveTowards(transform.position, targetWayPoint.position,   speed*Time.deltaTime);
+            if(transform.position == targetWayPoint.position){
+                currentWayPoint ++;
+                if(currentWayPoint < wayPointList.Length){
+                    targetWayPoint = wayPointList[currentWayPoint];
+                }
+            }
+        }
     } 
+
+    void MoveBack(){
+        currentWayPoint = 0;
+        targetWayPoint = null;
+        if(currentWayPoint2 < tempArray.Length){
+            if(targetWayPoint2 == null){
+                targetWayPoint2 = tempArray[currentWayPoint2];
+            }
+            transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint2.position - transform.position, 6.0f*Time.deltaTime, 0.0f);
+            transform.position = Vector3.MoveTowards(transform.position, targetWayPoint2.position, speed*Time.deltaTime);
+            if(transform.position == targetWayPoint2.position){
+                currentWayPoint2 ++;
+                if(currentWayPoint2 < tempArray.Length){
+                    targetWayPoint2 = tempArray[currentWayPoint2];
+                }
+            }
+        }
+
+    }
 
     public void deleteOrder()
     {
