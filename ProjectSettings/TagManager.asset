@@ -15,6 +15,7 @@ TagManager:
   - Selectable
   - RadioSet
   - Speaker
+  - Guest
   layers:
   - Default
   - TransparentFX
