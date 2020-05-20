@@ -44,7 +44,22 @@ ModelImporter:
     4300010: Plane.004
     4300012: BezierCircle
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 96e6d32654cd6c74e8db22efc61807fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 76efd1a68e2894247951e28afd0f7ddf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 4b7f492a8f78a0c42af010ff0e499917, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

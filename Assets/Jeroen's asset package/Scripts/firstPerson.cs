@@ -35,6 +35,8 @@ public class firstPerson : MonoBehaviour
     public GameObject badParticle;
     public Camera thisCam;
     public int selectedObj;
+    public Shader outlineShade;
+
     public static bool IsLeft, IsRight, IsUp, IsDown;
     private float _LastX, _LastY;
     private bool ActivityAvailable;
@@ -158,6 +160,7 @@ public class firstPerson : MonoBehaviour
         if (IsLeft == true && selectedObj > 1)
         {
             selectedObj -= 1;
+            Debug.Log(selectedObj);
         }
         if(thisCam.enabled == true)
         {
@@ -199,9 +202,10 @@ public class firstPerson : MonoBehaviour
         switch (selectedObj)
         {
             case 1:
-                firstObject.GetComponent<Renderer>().material.color = Color.green;
-                secondObject.GetComponent<Renderer>().material.color = Color.white;
-                thirdObject.GetComponent<Renderer>().material.color = Color.white;
+                firstObject.GetComponent<Renderer>().material.shader = outlineShade;
+                secondObject.GetComponent<Renderer>().material.shader = null;
+                thirdObject.GetComponent<Renderer>().material.shader = null;
+                Debug.Log(firstObject.GetComponent<Renderer>().material);
                 if (Input.GetButtonDown(clickButton))
                 {
                     Minigame.SetActive(true);
@@ -214,9 +218,9 @@ public class firstPerson : MonoBehaviour
                 }
                 break;
             case 2:
-                firstObject.GetComponent<Renderer>().material.color = Color.white;
-                secondObject.GetComponent<Renderer>().material.color = Color.green;
-                thirdObject.GetComponent<Renderer>().material.color = Color.white;
+                firstObject.GetComponent<Renderer>().material.shader = null;
+                secondObject.GetComponent<Renderer>().material.shader = outlineShade;
+                thirdObject.GetComponent<Renderer>().material.shader = null;
                 if (Input.GetButtonDown(clickButton))
                 {
                     Minigame.SetActive(true);
@@ -229,9 +233,9 @@ public class firstPerson : MonoBehaviour
                 }
                 break;
             case 3:
-                firstObject.GetComponent<Renderer>().material.color = Color.white;
-                secondObject.GetComponent<Renderer>().material.color = Color.white;
-                thirdObject.GetComponent<Renderer>().material.color = Color.green;
+                firstObject.GetComponent<Renderer>().material.shader = null;
+                secondObject.GetComponent<Renderer>().material.shader = null;
+                thirdObject.GetComponent<Renderer>().material.shader = outlineShade;
                 if (Input.GetButtonDown(clickButton))
                 {
                     Minigame.SetActive(true);
