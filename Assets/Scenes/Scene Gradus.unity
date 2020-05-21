@@ -2416,6 +2416,9 @@ MonoBehaviour:
   firstObject: {fileID: 2102155607}
   secondObject: {fileID: 175195127}
   thirdObject: {fileID: 1085200227}
+  colaBottle: {fileID: 0}
+  fristiBottle: {fileID: 0}
+  appleBottle: {fileID: 0}
   Cakes: {fileID: 683051435}
   Drinks: {fileID: 1277563886}
   drink1: {fileID: 239543746}
@@ -2436,8 +2439,8 @@ MonoBehaviour:
     type: 3}
   thisCam: {fileID: 741660503}
   selectedObj: 1
-  selectedMat: {fileID: 2100000, guid: 326d5c467de3910439ef75bbe8d74559, type: 2}
-  originalMat: {fileID: 2100000, guid: 3260ec409d76a3c4f9cdc7b7da922c0f, type: 2}
+  outlineShade: {fileID: 0}
+  standardShade: {fileID: 0}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -26418,7 +26421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224973364}
   m_LocalRotation: {x: 0.25881952, y: -0, z: -0, w: 0.96592575}
-  m_LocalPosition: {x: 17.09, y: 7.08, z: 1.86}
+  m_LocalPosition: {x: 17.09, y: 7.118, z: 3.381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1370127002}
@@ -29697,6 +29700,9 @@ MonoBehaviour:
   firstObject: {fileID: 1830517516}
   secondObject: {fileID: 922668599}
   thirdObject: {fileID: 735297128}
+  colaBottle: {fileID: 822468207}
+  fristiBottle: {fileID: 1106790959}
+  appleBottle: {fileID: 1379750600}
   Cakes: {fileID: 129402820}
   Drinks: {fileID: 1104711324}
   drink1: {fileID: 36644970}
@@ -29717,8 +29723,8 @@ MonoBehaviour:
     type: 3}
   thisCam: {fileID: 1224973366}
   selectedObj: 1
-  selectedMat: {fileID: 2100000, guid: 326d5c467de3910439ef75bbe8d74559, type: 2}
-  originalMat: {fileID: 2100000, guid: 3260ec409d76a3c4f9cdc7b7da922c0f, type: 2}
+  outlineShade: {fileID: 4800000, guid: 9b8d607772518d44a837f08ec5d5a644, type: 3}
+  standardShade: {fileID: 4800000, guid: f31e47e685fb6ea4ca58f41f3d186959, type: 3}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -36975,6 +36981,9 @@ MonoBehaviour:
   firstObject: {fileID: 723867919}
   secondObject: {fileID: 1275931662}
   thirdObject: {fileID: 373514934}
+  colaBottle: {fileID: 0}
+  fristiBottle: {fileID: 0}
+  appleBottle: {fileID: 0}
   Cakes: {fileID: 763622571}
   Drinks: {fileID: 1977629650}
   drink1: {fileID: 209746569}
@@ -36995,8 +37004,8 @@ MonoBehaviour:
     type: 3}
   thisCam: {fileID: 1313581689}
   selectedObj: 1
-  selectedMat: {fileID: 2100000, guid: 326d5c467de3910439ef75bbe8d74559, type: 2}
-  originalMat: {fileID: 2100000, guid: 3260ec409d76a3c4f9cdc7b7da922c0f, type: 2}
+  outlineShade: {fileID: 0}
+  standardShade: {fileID: 0}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -45218,6 +45227,9 @@ MonoBehaviour:
   firstObject: {fileID: 863057017}
   secondObject: {fileID: 584507294}
   thirdObject: {fileID: 1618844918}
+  colaBottle: {fileID: 0}
+  fristiBottle: {fileID: 0}
+  appleBottle: {fileID: 0}
   Cakes: {fileID: 998001658}
   Drinks: {fileID: 1841724062}
   drink1: {fileID: 673136861}
@@ -45238,8 +45250,8 @@ MonoBehaviour:
     type: 3}
   thisCam: {fileID: 2051409586}
   selectedObj: 1
-  selectedMat: {fileID: 2100000, guid: 326d5c467de3910439ef75bbe8d74559, type: 2}
-  originalMat: {fileID: 2100000, guid: 3260ec409d76a3c4f9cdc7b7da922c0f, type: 2}
+  outlineShade: {fileID: 0}
+  standardShade: {fileID: 0}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
