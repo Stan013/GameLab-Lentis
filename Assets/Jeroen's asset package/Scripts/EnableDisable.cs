@@ -13,10 +13,6 @@ public class EnableDisable : MonoBehaviour
     public string activateButton;
     // Start is called before the first frame update
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(transform);
-    }
     void Start()
     {
         images = canvasObj.GetComponentsInChildren<Image>();

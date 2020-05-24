@@ -8,11 +8,11 @@ public class Movement : MonoBehaviour
 {
     public enum players { player1, player2, player3, player4}
     public players player;
-    [Range(-100, 100)] public float Sadness;
-    [Range(-100, 100)] public float Happiness;
-    [Range(-100, 100)] public float Anxiety;
-    [Range(-100, 100)] public float Anger;
-    [Range(-100, 100)] public float Energy;
+    [Range(-100, 100)] public int Sadness;
+    [Range(-100, 100)] public int Happiness;
+    [Range(-100, 100)] public int Anxiety;
+    [Range(-100, 100)] public int Anger;
+    [Range(-100, 100)] public int Energy;
     public Image button;
     public Image activitytimer;
     public string activityButton;
@@ -36,20 +36,7 @@ public class Movement : MonoBehaviour
     public GameObject OrderObject;
 
     private Movement playerInstance;
-    private void Awake()
-    {
-        
-        DontDestroyOnLoad(this);
-        if (playerInstance == null)
-        {
-            playerInstance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-        
-    }
+
     void Start()
     {
         anim = this.GetComponent<Animator>();
