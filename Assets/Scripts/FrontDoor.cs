@@ -13,7 +13,7 @@ public class FrontDoor : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "Guest" || collider.gameObject.tag == "Player"){
+        if(collider.gameObject.tag == "Guest"){
             if(animatorLift.GetBool("Open") == false){
                 animatorLift.SetBool("Open", true);
             }
@@ -22,7 +22,7 @@ public class FrontDoor : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        if(collider.gameObject.tag == "Guest" || collider.gameObject.tag == "Player"){
+        if(collider.gameObject.tag == "Guest"){
             if(animatorLift.GetBool("Open") == true){
                 animatorLift.SetBool("Open", false);
             }

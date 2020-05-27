@@ -11,11 +11,11 @@ public class Activity : MonoBehaviour
     public List<GameObject> targets = new List<GameObject>();
     public float timeAMt = 5;
     float time;
-    public float addHappy;
-    public float addAnger;
-    public float addSad;
-    public float addAnxiety;
-    public float addEnergy;
+    public int addHappy;
+    public int addAnger;
+    public int addSad;
+    public int addAnxiety;
+    public int addEnergy;
 
     void OnTriggerStay(Collider other)
     {

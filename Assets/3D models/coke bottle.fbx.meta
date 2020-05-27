@@ -22,7 +22,17 @@ ModelImporter:
     4300000: bottle
     4300002: Label
     4300004: bottle.001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 42871e5bc1f4dd44e90ce762fbe934bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 8f73a50e73150de4b90b6837e2f101c2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

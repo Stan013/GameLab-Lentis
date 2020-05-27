@@ -15,6 +15,9 @@ public class firstPerson : MonoBehaviour
     public GameObject firstObject;
     public GameObject secondObject;
     public GameObject thirdObject;
+    public GameObject colaBottle;
+    public GameObject fristiBottle;
+    public GameObject appleBottle;
 
     public GameObject Cakes;
     public GameObject Drinks;
@@ -35,6 +38,10 @@ public class firstPerson : MonoBehaviour
     public GameObject badParticle;
     public Camera thisCam;
     public int selectedObj;
+    public Shader outlineShade;
+    public Shader standardShade;
+
+
     public static bool IsLeft, IsRight, IsUp, IsDown;
     private float _LastX, _LastY;
     private bool ActivityAvailable;
@@ -158,6 +165,7 @@ public class firstPerson : MonoBehaviour
         if (IsLeft == true && selectedObj > 1)
         {
             selectedObj -= 1;
+            Debug.Log(selectedObj);
         }
         if(thisCam.enabled == true)
         {
@@ -199,9 +207,52 @@ public class firstPerson : MonoBehaviour
         switch (selectedObj)
         {
             case 1:
-                firstObject.GetComponent<Renderer>().material.color = Color.green;
-                secondObject.GetComponent<Renderer>().material.color = Color.white;
-                thirdObject.GetComponent<Renderer>().material.color = Color.white;
+                if (firstObject == drink1)
+                {
+                    Renderer[] Q;
+                    Renderer[] others1;
+                    Renderer[] others2;
+
+                    Q = colaBottle.GetComponentsInChildren<Renderer>();
+                    others1 = fristiBottle.GetComponentsInChildren<Renderer>();
+                    others2 = appleBottle.GetComponentsInChildren<Renderer>();
+
+                    foreach (Renderer rend in Q)
+                    {
+                        rend.material.shader = outlineShade;
+                    }
+                    foreach (Renderer rend in others1)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                    foreach (Renderer rend in others2)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+
+                } else if (firstObject == food1)
+                {
+                    Renderer[] Q;
+                    Renderer[] others1;
+                    Renderer[] others2;
+
+                    Q = food1.GetComponentsInChildren<Renderer>();
+                    others1 = food2.GetComponentsInChildren<Renderer>();
+                    others2 = food3.GetComponentsInChildren<Renderer>();
+
+                    foreach (Renderer rend in Q)
+                    {
+                        rend.material.shader = outlineShade;
+                    }
+                    foreach (Renderer rend in others1)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                    foreach (Renderer rend in others2)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                }
                 if (Input.GetButtonDown(clickButton))
                 {
                     Minigame.SetActive(true);
@@ -214,9 +265,52 @@ public class firstPerson : MonoBehaviour
                 }
                 break;
             case 2:
-                firstObject.GetComponent<Renderer>().material.color = Color.white;
-                secondObject.GetComponent<Renderer>().material.color = Color.green;
-                thirdObject.GetComponent<Renderer>().material.color = Color.white;
+                if (secondObject == drink2)
+                {
+                    Renderer[] Q;
+                    Renderer[] others1;
+                    Renderer[] others2;
+
+                    Q = fristiBottle.GetComponentsInChildren<Renderer>();
+                    others1 = colaBottle.GetComponentsInChildren<Renderer>();
+                    others2 = appleBottle.GetComponentsInChildren<Renderer>();
+
+                    foreach (Renderer rend in Q)
+                    {
+                        rend.material.shader = outlineShade;
+                    }
+                    foreach (Renderer rend in others1)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                    foreach (Renderer rend in others2)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                }
+                else if (secondObject == food2)
+                {
+                    Renderer[] Q;
+                    Renderer[] others1;
+                    Renderer[] others2;
+
+                    Q = food2.GetComponentsInChildren<Renderer>();
+                    others1 = food1.GetComponentsInChildren<Renderer>();
+                    others2 = food3.GetComponentsInChildren<Renderer>();
+
+                    foreach (Renderer rend in Q)
+                    {
+                        rend.material.shader = outlineShade;
+                    }
+                    foreach (Renderer rend in others1)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                    foreach (Renderer rend in others2)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                }
                 if (Input.GetButtonDown(clickButton))
                 {
                     Minigame.SetActive(true);
@@ -229,9 +323,52 @@ public class firstPerson : MonoBehaviour
                 }
                 break;
             case 3:
-                firstObject.GetComponent<Renderer>().material.color = Color.white;
-                secondObject.GetComponent<Renderer>().material.color = Color.white;
-                thirdObject.GetComponent<Renderer>().material.color = Color.green;
+                if (thirdObject == drink3)
+                {
+                    Renderer[] Q;
+                    Renderer[] others1;
+                    Renderer[] others2;
+
+                    Q = appleBottle.GetComponentsInChildren<Renderer>();
+                    others1 = colaBottle.GetComponentsInChildren<Renderer>();
+                    others2 = fristiBottle.GetComponentsInChildren<Renderer>();
+
+                    foreach (Renderer rend in Q)
+                    {
+                        rend.material.shader = outlineShade;
+                    }
+                    foreach (Renderer rend in others1)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                    foreach (Renderer rend in others2)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                }
+                else if (thirdObject == food3)
+                {
+                    Renderer[] Q;
+                    Renderer[] others1;
+                    Renderer[] others2;
+
+                    Q = food3.GetComponentsInChildren<Renderer>();
+                    others1 = food1.GetComponentsInChildren<Renderer>();
+                    others2 = food2.GetComponentsInChildren<Renderer>();
+
+                    foreach (Renderer rend in Q)
+                    {
+                        rend.material.shader = outlineShade;
+                    }
+                    foreach (Renderer rend in others1)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                    foreach (Renderer rend in others2)
+                    {
+                        rend.material.shader = standardShade;
+                    }
+                }
                 if (Input.GetButtonDown(clickButton))
                 {
                     Minigame.SetActive(true);
