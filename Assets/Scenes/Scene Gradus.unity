@@ -12905,7 +12905,7 @@ GameObject:
   - component: {fileID: 552107976}
   - component: {fileID: 552107979}
   - component: {fileID: 552107978}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main CameraP2
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -12998,7 +12998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: 31795f09e848a6e4fbb20e7e057b7e7c, type: 2}
-  isGlobal: 0
+  isGlobal: 1
   blendDistance: 0
   weight: 1
   priority: 0
@@ -13017,7 +13017,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 552107975}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 8449
+    m_Bits: 4
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -13845,7 +13845,7 @@ GameObject:
   - component: {fileID: 594947029}
   - component: {fileID: 594947033}
   - component: {fileID: 594947032}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main CameraP1
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -13962,10 +13962,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 594947028}
+  volumeTrigger: {fileID: 552107975}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 8449
+    m_Bits: 4
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -17381,7 +17381,7 @@ GameObject:
   - component: {fileID: 741660503}
   - component: {fileID: 741660506}
   - component: {fileID: 741660505}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -17458,7 +17458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: d433a98418c287748a7c0360940044ed, type: 2}
   isGlobal: 1
-  blendDistance: 0
+  blendDistance: 1.17
   weight: 1
   priority: 0
 --- !u!114 &741660506
@@ -17476,7 +17476,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 741660504}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -19126,7 +19126,7 @@ GameObject:
   - component: {fileID: 851870918}
   - component: {fileID: 851870921}
   - component: {fileID: 851870920}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main CameraP4
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -19219,7 +19219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: 31795f09e848a6e4fbb20e7e057b7e7c, type: 2}
-  isGlobal: 0
+  isGlobal: 1
   blendDistance: 0
   weight: 1
   priority: 0
@@ -19235,10 +19235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 851870917}
+  volumeTrigger: {fileID: 552107975}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 8449
+    m_Bits: 4
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -26505,7 +26505,7 @@ GameObject:
   - component: {fileID: 1224973366}
   - component: {fileID: 1224973368}
   - component: {fileID: 1224973367}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -26582,7 +26582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: d433a98418c287748a7c0360940044ed, type: 2}
   isGlobal: 1
-  blendDistance: 0
+  blendDistance: 1.17
   weight: 1
   priority: 0
 --- !u!114 &1224973368
@@ -26600,7 +26600,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 741660504}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 8471
+    m_Bits: 2
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -29146,7 +29146,7 @@ GameObject:
   - component: {fileID: 1313581689}
   - component: {fileID: 1313581692}
   - component: {fileID: 1313581691}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -29223,7 +29223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: d433a98418c287748a7c0360940044ed, type: 2}
   isGlobal: 1
-  blendDistance: 0
+  blendDistance: 1.17
   weight: 1
   priority: 0
 --- !u!114 &1313581692
@@ -29241,7 +29241,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 741660504}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -44827,7 +44827,7 @@ GameObject:
   - component: {fileID: 2051409586}
   - component: {fileID: 2051409589}
   - component: {fileID: 2051409588}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -44904,7 +44904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: d433a98418c287748a7c0360940044ed, type: 2}
   isGlobal: 1
-  blendDistance: 0
+  blendDistance: 1.17
   weight: 1
   priority: 0
 --- !u!114 &2051409589
@@ -44922,7 +44922,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 741660504}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -46022,7 +46022,7 @@ GameObject:
   - component: {fileID: 2099587803}
   - component: {fileID: 2099587806}
   - component: {fileID: 2099587805}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main CameraP3
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -46115,7 +46115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: 31795f09e848a6e4fbb20e7e057b7e7c, type: 2}
-  isGlobal: 0
+  isGlobal: 1
   blendDistance: 0
   weight: 1
   priority: 0
@@ -46131,10 +46131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 2099587802}
+  volumeTrigger: {fileID: 552107975}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 8449
+    m_Bits: 4
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
