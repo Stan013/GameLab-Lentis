@@ -18605,7 +18605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 210
   resetTime: 210
-  phase: WorkWave3
+  phase: WorkIntro
   phaseCount: 0
   timerText: {fileID: 1965849133}
   guest1: {fileID: 919425084}
