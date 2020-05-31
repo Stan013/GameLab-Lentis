@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PhaseTimer : MonoBehaviour
 {
@@ -65,6 +66,9 @@ public class PhaseTimer : MonoBehaviour
                 phase = "Prep";
             }
             time = resetTime;
+        }
+        if(phase == "Prep" && phaseCount == 5){//Goes to end
+            SceneManager.LoadScene("Ending");
         }
     }
 
@@ -263,5 +267,6 @@ public class PhaseTimer : MonoBehaviour
         if(timerText.text == "00:01"){
             guest8.GetComponent<GuestAI>().deleteOrder();
         }
+        phaseCount = 5;
     }
 }
