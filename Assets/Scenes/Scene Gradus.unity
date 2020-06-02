@@ -29527,7 +29527,7 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
+  m_ShowToolkit: 1
   m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
@@ -32579,8 +32579,8 @@ GameObject:
   - component: {fileID: 1423113853}
   - component: {fileID: 1423113852}
   - component: {fileID: 1423113851}
-  - component: {fileID: 1423113850}
   - component: {fileID: 1423113848}
+  - component: {fileID: 1423113849}
   m_Layer: 0
   m_Name: RadioSet
   m_TagString: RadioSet
@@ -32599,21 +32599,29 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.055362, y: 0.9999999, z: 9.314457}
-  m_Center: {x: 0.37655953, y: 0, z: 4.157228}
---- !u!65 &1423113850
-BoxCollider:
+  m_Size: {x: 6.055362, y: 4.224718, z: 9.314457}
+  m_Center: {x: 0.37655953, y: 1.612359, z: 4.157228}
+--- !u!114 &1423113849
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423113847}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67c428b190be354c84be72adc7a87ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayers: 1
+  amountOfPlayers: 0
+  targets: []
+  timeAMt: 5
+  addHappy: 1
+  addAnger: 0
+  addSad: 0
+  addAnxiety: -1
+  addEnergy: -1
 --- !u!23 &1423113851
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37162,6 +37170,7 @@ GameObject:
   - component: {fileID: 1649497243}
   - component: {fileID: 1649497246}
   - component: {fileID: 1649497247}
+  - component: {fileID: 1649497248}
   m_Layer: 13
   m_Name: PlayerP2
   m_TagString: Player
@@ -37230,10 +37239,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  Sadness: -80
+  Sadness: 0
   Happiness: 54
   Anxiety: -19
-  Anger: 61
+  Anger: 80
   Energy: -56
   button: {fileID: 988622320}
   activitytimer: {fileID: 1100364496}
@@ -37366,6 +37375,27 @@ MonoBehaviour:
   movement: {fileID: 0}
   orderQuality: 
   Clone: {fileID: 0}
+--- !u!114 &1649497248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649497239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef483f0581988c4284eb3eb72bfbab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerChar: {fileID: 703239360}
+  animController: {fileID: 1649497244}
+  danceCollider: {fileID: 1423113848}
+  player: {fileID: 1649497243}
+  firstPersonMode: {fileID: 1313581689}
+  isKeeper: 0
+  isKicking: 0
+  isDancing: 0
+  pointScored: 0
 --- !u!1 &1651769900
 GameObject:
   m_ObjectHideFlags: 0
@@ -41717,11 +41747,11 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 0
-  addAnger: 0
+  addHappy: 1
+  addAnger: -2
   addSad: 0
   addAnxiety: 0
-  addEnergy: 0
+  addEnergy: 2
 --- !u!65 &1851502091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41754,6 +41784,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1851502087}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1851502098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851502089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67c428b190be354c84be72adc7a87ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayers: 1
+  amountOfPlayers: 0
+  targets: []
+  timeAMt: 5
+  addHappy: 1
+  addAnger: -2
+  addSad: 0
+  addAnxiety: 0
+  addEnergy: 2
 --- !u!1 &1858515060
 GameObject:
   m_ObjectHideFlags: 0
