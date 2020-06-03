@@ -1167,10 +1167,10 @@ MonoBehaviour:
   targets: []
   timeAMt: 5
   addHappy: 0
-  addAnger: 0
-  addSad: 0
+  addAnger: -2
+  addSad: -1
   addAnxiety: 0
-  addEnergy: 0
+  addEnergy: -1
 --- !u!95 &37378519
 Animator:
   serializedVersion: 3
@@ -37242,7 +37242,7 @@ MonoBehaviour:
   Sadness: 0
   Happiness: 54
   Anxiety: -19
-  Anger: 80
+  Anger: 0
   Energy: -56
   button: {fileID: 988622320}
   activitytimer: {fileID: 1100364496}
@@ -37389,13 +37389,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerChar: {fileID: 703239360}
   animController: {fileID: 1649497244}
-  danceCollider: {fileID: 1423113848}
+  radioBox1: {fileID: 1423113847}
+  soccerBall: {fileID: 1688965194}
   player: {fileID: 1649497243}
   firstPersonMode: {fileID: 1313581689}
   isKeeper: 0
   isKicking: 0
   isDancing: 0
   pointScored: 0
+  withinRangeDance: 0
+  withinRangeBall: 0
 --- !u!1 &1651769900
 GameObject:
   m_ObjectHideFlags: 0
@@ -37806,6 +37809,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687990419}
   m_CullTransparentMesh: 0
+--- !u!1 &1688965194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: bdf9966ffc4746a48a79e40656007053,
+    type: 3}
+  m_PrefabInstance: {fileID: 37378516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1689622805
 GameObject:
   m_ObjectHideFlags: 0

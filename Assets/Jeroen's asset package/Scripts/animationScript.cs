@@ -6,7 +6,8 @@ public class animationScript : MonoBehaviour
 {
     [SerializeField] public GameObject playerChar;
     [SerializeField] private Animator animController;
-    [SerializeField] private BoxCollider danceCollider;
+    [SerializeField] private GameObject radioBox1;
+    [SerializeField] private GameObject soccerBall;
     [SerializeField] private Movement player;
     [SerializeField] private Camera firstPersonMode;
 
@@ -42,15 +43,21 @@ public class animationScript : MonoBehaviour
         {
             animController.SetBool("isBaking", false);
         }
-        if (danceCollider.bounds.Contains(playerChar.transform.position))
+        if (Input.GetButton(this.GetComponent<Movement>().activityButton) && (this.GetComponent<Movement>().button.isActiveAndEnabled) && (Vector3.Distance(playerChar.transform.position, soccerBall.transform.position) < 1))
         {
-            isDancing = true;
-            Debug.Log("dancing");
+            Debug.Log(Vector3.Distance(playerChar.transform.position, soccerBall.transform.position));
+            animController.SetBool("isKicking", true);
+
+        } else 
+        {
+            animController.SetBool("isKicking", false);
         }
-        if (danceCollider.bounds.Contains(this.gameObject.transform.position) && Input.GetButton(gameObject.GetComponent<Movement>().activityButton)) 
+        if (Input.GetButton(this.GetComponent<Movement>().activityButton) && (this.GetComponent<Movement>().button.isActiveAndEnabled) && (Vector3.Distance(playerChar.transform.position, radioBox1.transform.position) < 2))
         {
             animController.SetBool("isDancing", true);
-            Debug.Log("dancing");
+        } else
+        {
+            animController.SetBool("isDancing", false);
         }
     }
 }
