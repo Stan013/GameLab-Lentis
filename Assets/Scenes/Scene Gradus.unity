@@ -2320,6 +2320,7 @@ GameObject:
   - component: {fileID: 75930083}
   - component: {fileID: 75930086}
   - component: {fileID: 75930087}
+  - component: {fileID: 75930088}
   m_Layer: 13
   m_Name: PlayerP3
   m_TagString: Player
@@ -2524,6 +2525,28 @@ MonoBehaviour:
   movement: {fileID: 0}
   orderQuality: 
   Clone: {fileID: 0}
+--- !u!114 &75930088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75930079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef483f0581988c4284eb3eb72bfbab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerChar: {fileID: 2127638093}
+  animController: {fileID: 75930084}
+  radioBox1: {fileID: 1423113847}
+  soccerBall: {fileID: 1688965194}
+  player: {fileID: 75930083}
+  firstPersonMode: {fileID: 741660503}
+  isKeeper: 0
+  isKicking: 0
+  isDancing: 0
+  pointScored: 0
 --- !u!1 &76895704
 GameObject:
   m_ObjectHideFlags: 0
@@ -29899,6 +29922,7 @@ GameObject:
   - component: {fileID: 1325923345}
   - component: {fileID: 1325923348}
   - component: {fileID: 1325923349}
+  - component: {fileID: 1325923350}
   m_Layer: 13
   m_Name: PlayerP1
   m_TagString: Player
@@ -30103,6 +30127,28 @@ MonoBehaviour:
   movement: {fileID: 0}
   orderQuality: 
   Clone: {fileID: 0}
+--- !u!114 &1325923350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325923341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef483f0581988c4284eb3eb72bfbab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerChar: {fileID: 1759097364}
+  animController: {fileID: 1325923346}
+  radioBox1: {fileID: 1423113847}
+  soccerBall: {fileID: 1688965194}
+  player: {fileID: 1325923345}
+  firstPersonMode: {fileID: 1313581689}
+  isKeeper: 0
+  isKicking: 0
+  isDancing: 0
+  pointScored: 0
 --- !u!1 &1330849016
 GameObject:
   m_ObjectHideFlags: 0
@@ -37397,8 +37443,6 @@ MonoBehaviour:
   isKicking: 0
   isDancing: 0
   pointScored: 0
-  withinRangeDance: 0
-  withinRangeBall: 0
 --- !u!1 &1651769900
 GameObject:
   m_ObjectHideFlags: 0
@@ -45581,6 +45625,7 @@ GameObject:
   - component: {fileID: 2068738479}
   - component: {fileID: 2068738482}
   - component: {fileID: 2068738483}
+  - component: {fileID: 2068738484}
   m_Layer: 13
   m_Name: PlayerP4
   m_TagString: Player
@@ -45785,6 +45830,28 @@ MonoBehaviour:
   movement: {fileID: 0}
   orderQuality: 
   Clone: {fileID: 0}
+--- !u!114 &2068738484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068738475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef483f0581988c4284eb3eb72bfbab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerChar: {fileID: 106346596}
+  animController: {fileID: 2068738480}
+  radioBox1: {fileID: 1423113847}
+  soccerBall: {fileID: 1688965194}
+  player: {fileID: 2068738479}
+  firstPersonMode: {fileID: 2051409586}
+  isKeeper: 0
+  isKicking: 0
+  isDancing: 0
+  pointScored: 0
 --- !u!1 &2069966610
 GameObject:
   m_ObjectHideFlags: 0
