@@ -36,6 +36,8 @@ public class ScoreManager : MonoBehaviour
     public static int Player4Energy;
     // Start is called before the first frame update
     private static ScoreManager playerInstance;
+
+    public Text text;
     void Awake()
     {
         DontDestroyOnLoad(this);
@@ -97,5 +99,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         finalScore = Player1Score + Player2Score + Player3Score + Player4Score;
+
+        text.text = ("Score: " + finalScore);
     }
 }
