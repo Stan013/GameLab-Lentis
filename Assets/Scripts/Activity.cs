@@ -16,6 +16,14 @@ public class Activity : MonoBehaviour
     public int addSad;
     public int addAnxiety;
     public int addEnergy;
+    [SerializeField] private AudioClip activitySound;
+    private AudioSource audioSrc1;
+
+    void Start()
+    {
+        audioSrc1 = GetComponent <AudioSource>();
+        audioSrc1.loop = true;
+    }
 
     void OnTriggerStay(Collider other)
     {
@@ -28,6 +36,10 @@ public class Activity : MonoBehaviour
             other.GetComponent<Movement>().button.enabled = false;
             if (time <= timeAMt)
             {
+                if(!audioSrc1.isPlaying)
+                {
+                    audioSrc1.Play();
+                }
                 time += Time.deltaTime;
                 other.gameObject.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
                 Debug.Log(time);
