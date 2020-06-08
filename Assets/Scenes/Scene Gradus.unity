@@ -1108,7 +1108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bdf9966ffc4746a48a79e40656007053, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.7
+      value: 9.27
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bdf9966ffc4746a48a79e40656007053, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1171,6 +1171,7 @@ MonoBehaviour:
   addSad: -1
   addAnxiety: 0
   addEnergy: -1
+  interacting: 0
 --- !u!95 &37378519
 Animator:
   serializedVersion: 3
@@ -1201,8 +1202,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4304562, y: 1, z: 1.2823381}
-  m_Center: {x: 0.11115217, y: 0, z: -0.14116907}
+  m_Size: {x: 3.8529572, y: 1, z: 4.251196}
+  m_Center: {x: -0.10009837, y: 0, z: 0.1869402}
 --- !u!1 &39197392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,16 +2538,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef483f0581988c4284eb3eb72bfbab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerChar: {fileID: 2127638093}
+  playerChar: {fileID: 75930079}
   animController: {fileID: 75930084}
   radioBox1: {fileID: 1423113847}
   soccerBall: {fileID: 1688965194}
   player: {fileID: 75930083}
   firstPersonMode: {fileID: 741660503}
-  isKeeper: 0
-  isKicking: 0
-  isDancing: 0
-  pointScored: 0
 --- !u!1 &76895704
 GameObject:
   m_ObjectHideFlags: 0
@@ -9707,6 +9704,7 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: 0
   addEnergy: 0
+  interacting: 0
 --- !u!65 &371098797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10374,6 +10372,7 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: 0
   addEnergy: 0
+  interacting: 0
 --- !u!1001 &409854789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18756,6 +18755,7 @@ GameObject:
   - component: {fileID: 825993956}
   - component: {fileID: 825993955}
   - component: {fileID: 825993957}
+  - component: {fileID: 825993958}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -18819,6 +18819,19 @@ MonoBehaviour:
   platePrefab: {fileID: 8114460031514609245, guid: c05b0b9629ae01a458dceab30743d4fb,
     type: 3}
   amountofPlates: 0
+--- !u!114 &825993958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825993954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727b404bc5939d54dbb4157cf4aadbc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalKeep: 0
 --- !u!1 &828252774
 GameObject:
   m_ObjectHideFlags: 0
@@ -19351,6 +19364,7 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: 0
   addEnergy: 0
+  interacting: 0
 --- !u!65 &847819606
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30288,16 +30302,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef483f0581988c4284eb3eb72bfbab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerChar: {fileID: 1759097364}
+  playerChar: {fileID: 1325923341}
   animController: {fileID: 1325923346}
   radioBox1: {fileID: 1423113847}
   soccerBall: {fileID: 1688965194}
   player: {fileID: 1325923345}
   firstPersonMode: {fileID: 1313581689}
-  isKeeper: 0
-  isKicking: 0
-  isDancing: 0
-  pointScored: 0
 --- !u!1 &1330849016
 GameObject:
   m_ObjectHideFlags: 0
@@ -32817,6 +32827,7 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: -1
   addEnergy: -1
+  interacting: 0
 --- !u!23 &1423113851
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37582,16 +37593,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef483f0581988c4284eb3eb72bfbab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerChar: {fileID: 703239360}
+  playerChar: {fileID: 1649497239}
   animController: {fileID: 1649497244}
   radioBox1: {fileID: 1423113847}
   soccerBall: {fileID: 1688965194}
   player: {fileID: 1649497243}
   firstPersonMode: {fileID: 1313581689}
-  isKeeper: 0
-  isKicking: 0
-  isDancing: 0
-  pointScored: 0
 --- !u!1 &1651769900
 GameObject:
   m_ObjectHideFlags: 0
@@ -41954,6 +41961,7 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: 0
   addEnergy: 2
+  interacting: 0
 --- !u!65 &1851502091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42007,6 +42015,7 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: 0
   addEnergy: 2
+  interacting: 0
 --- !u!1 &1858515060
 GameObject:
   m_ObjectHideFlags: 0
@@ -45992,16 +46001,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef483f0581988c4284eb3eb72bfbab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerChar: {fileID: 106346596}
+  playerChar: {fileID: 2068738475}
   animController: {fileID: 2068738480}
   radioBox1: {fileID: 1423113847}
   soccerBall: {fileID: 1688965194}
   player: {fileID: 2068738479}
   firstPersonMode: {fileID: 2051409586}
-  isKeeper: 0
-  isKicking: 0
-  isDancing: 0
-  pointScored: 0
 --- !u!1 &2069966610
 GameObject:
   m_ObjectHideFlags: 0
