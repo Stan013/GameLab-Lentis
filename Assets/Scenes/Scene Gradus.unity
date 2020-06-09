@@ -2555,6 +2555,8 @@ MonoBehaviour:
   standardShade: {fileID: 4800000, guid: f31e47e685fb6ea4ca58f41f3d186959, type: 3}
   goodSound: {fileID: 8300000, guid: 7ef2e5d4751af2549b2e46dd9a6a2359, type: 3}
   badSound: {fileID: 8300000, guid: 2ef5c389eaf64674893c863e7e0742a9, type: 3}
+  drinkSound: {fileID: 8300000, guid: 33a1149682b3ac949892179fa5f2552d, type: 3}
+  cakeSound: {fileID: 8300000, guid: f257956384677fe42b34eaec1558828a, type: 3}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -38509,6 +38511,8 @@ MonoBehaviour:
   standardShade: {fileID: 4800000, guid: f31e47e685fb6ea4ca58f41f3d186959, type: 3}
   goodSound: {fileID: 8300000, guid: 7ef2e5d4751af2549b2e46dd9a6a2359, type: 3}
   badSound: {fileID: 8300000, guid: 2ef5c389eaf64674893c863e7e0742a9, type: 3}
+  drinkSound: {fileID: 8300000, guid: 33a1149682b3ac949892179fa5f2552d, type: 3}
+  cakeSound: {fileID: 8300000, guid: f257956384677fe42b34eaec1558828a, type: 3}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -47298,6 +47302,8 @@ MonoBehaviour:
   standardShade: {fileID: 4800000, guid: f31e47e685fb6ea4ca58f41f3d186959, type: 3}
   goodSound: {fileID: 8300000, guid: 7ef2e5d4751af2549b2e46dd9a6a2359, type: 3}
   badSound: {fileID: 8300000, guid: 2ef5c389eaf64674893c863e7e0742a9, type: 3}
+  drinkSound: {fileID: 8300000, guid: 33a1149682b3ac949892179fa5f2552d, type: 3}
+  cakeSound: {fileID: 8300000, guid: f257956384677fe42b34eaec1558828a, type: 3}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -58160,6 +58166,8 @@ MonoBehaviour:
   standardShade: {fileID: 4800000, guid: f31e47e685fb6ea4ca58f41f3d186959, type: 3}
   goodSound: {fileID: 8300000, guid: 7ef2e5d4751af2549b2e46dd9a6a2359, type: 3}
   badSound: {fileID: 8300000, guid: 2ef5c389eaf64674893c863e7e0742a9, type: 3}
+  drinkSound: {fileID: 8300000, guid: 33a1149682b3ac949892179fa5f2552d, type: 3}
+  cakeSound: {fileID: 8300000, guid: f257956384677fe42b34eaec1558828a, type: 3}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}

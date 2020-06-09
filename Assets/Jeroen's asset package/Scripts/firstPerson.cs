@@ -43,6 +43,8 @@ public class firstPerson : MonoBehaviour
 
     [SerializeField] private AudioClip goodSound;
     [SerializeField] private AudioClip badSound;
+    [SerializeField] private AudioClip drinkSound;
+    [SerializeField] private AudioClip cakeSound;
     private AudioSource audioSrc;
 
     public static bool IsLeft, IsRight, IsUp, IsDown;
@@ -221,6 +223,10 @@ public class firstPerson : MonoBehaviour
             case 1:
                 if (firstObject == drink1)
                 {
+                    if(!audioSrc.isPlaying)
+                    {
+                        audioSrc.PlayOneShot(drinkSound);
+                    }
                     Renderer[] Q;
                     Renderer[] others1;
                     Renderer[] others2;
@@ -244,6 +250,10 @@ public class firstPerson : MonoBehaviour
 
                 } else if (firstObject == food1)
                 {
+                    if(!audioSrc.isPlaying)
+                    {
+                        audioSrc.PlayOneShot(cakeSound);
+                    }
                     Renderer[] Q;
                     Renderer[] others1;
                     Renderer[] others2;
