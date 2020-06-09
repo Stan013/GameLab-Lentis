@@ -17,12 +17,14 @@ public class Activity : MonoBehaviour
     public int addAnxiety;
     public int addEnergy;
     [SerializeField] private AudioClip activitySound;
-    private AudioSource audioSrc1;
+    [SerializeField] private AudioClip progressSound;
+    [SerializeField] private AudioClip pointSound;
+    private AudioSource audioSrc;
+    public bool interacting = false;
 
     void Start()
     {
-        audioSrc1 = GetComponent <AudioSource>();
-        audioSrc1.loop = true;
+        audioSrc = GetComponent <AudioSource>();
     }
 
     void OnTriggerStay(Collider other)
@@ -36,9 +38,16 @@ public class Activity : MonoBehaviour
             other.GetComponent<Movement>().button.enabled = false;
             if (time <= timeAMt)
             {
-                if(!audioSrc1.isPlaying)
+                if(!audioSrc.isPlaying)
                 {
-                    audioSrc1.Play();
+                    if(progressSound != null)
+                    {
+                        audioSrc.PlayOneShot(progressSound);
+                    }
+                    if(activitySound != null)
+                    {
+                        audioSrc.PlayOneShot(activitySound);
+                    }
                 }
                 time += Time.deltaTime;
                 other.gameObject.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
@@ -47,6 +56,13 @@ public class Activity : MonoBehaviour
             if(time >= timeAMt)
             {
                 time = 0;
+                if(!audioSrc.isPlaying)
+                {
+                    if(pointSound != null)
+                    {
+                        audioSrc.PlayOneShot(pointSound);
+                    }
+                }
                 foreach (Movement stats in targets.Select(t => t.GetComponent<Movement>()))
                 {
                     stats.Happiness+= addHappy;
@@ -60,8 +76,6 @@ public class Activity : MonoBehaviour
         else
         {
             time = 0;
-            other.gameObject.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
-            other.GetComponent<Movement>().button.enabled = true;
         }
     }
 

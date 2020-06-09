@@ -41,6 +41,9 @@ public class firstPerson : MonoBehaviour
     public Shader outlineShade;
     public Shader standardShade;
 
+    [SerializeField] private AudioClip goodSound;
+    [SerializeField] private AudioClip badSound;
+    private AudioSource audioSrc;
 
     public static bool IsLeft, IsRight, IsUp, IsDown;
     private float _LastX, _LastY;
@@ -67,6 +70,7 @@ public class firstPerson : MonoBehaviour
     }
     private void Start()
     {
+        audioSrc = GetComponent <AudioSource>();
       //  thisCam = gameObject.GetComponentInChildren<Camera>();
         thisCam.enabled = false;
         FinalValue = Minigame.GetComponentInChildren<MoveBar>().finalValue;
@@ -187,11 +191,19 @@ public class firstPerson : MonoBehaviour
                 {
                     Instantiate(GoodParticle, Food.transform);
                     orderQuality = "Good";
+                    if(!audioSrc.isPlaying)
+                    {
+                        audioSrc.PlayOneShot(goodSound);
+                    }
                 }
                 else
                 {
                     Instantiate(badParticle, Food.transform);
                     orderQuality = "Bad";
+                    if(!audioSrc.isPlaying)
+                    {
+                        audioSrc.PlayOneShot(badSound);
+                    }
                 }
                 thisCam.enabled = false;
                 movement.enabled = true;

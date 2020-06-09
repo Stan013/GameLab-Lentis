@@ -14,6 +14,8 @@ public class GuestAI : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private PhaseTimer phase;
     [SerializeField] private GameObject orderWanted;
+    [SerializeField] private AudioClip pointSound;
+    private AudioSource audioSrc;
     public bool musicOn = false;
     
     private GameObject drink1;
@@ -42,6 +44,7 @@ public class GuestAI : MonoBehaviour
         food3.SetActive(false);
         music = GameObject.Find("Order/speakers");
         music.SetActive(false);
+        audioSrc = GetComponent <AudioSource>();
     }
 
     void Update () {
@@ -139,11 +142,17 @@ public class GuestAI : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Debug.Log("Cool");
             if (Input.GetButton(collider.GetComponent<Movement>().activityButton))
             {
                 if (orderWanted.name +("(Clone)") == collider.GetComponent<Movement>().OrderObject.name)
                 {
+                    if(!audioSrc.isPlaying)
+                    {
+                        if(pointSound != null)
+                        {
+                            audioSrc.PlayOneShot(pointSound);
+                        }
+                    }
                     collider.GetComponent<Movement>().PlayerScore += 1;
                     if(collider.GetComponent<firstPerson>().orderQuality == "Good")
                     {
@@ -155,6 +164,13 @@ public class GuestAI : MonoBehaviour
                 {
                     if(musicOn == true)
                     {
+                        if(!audioSrc.isPlaying)
+                        {
+                            if(pointSound != null)
+                            {
+                                audioSrc.PlayOneShot(pointSound);
+                            }
+                        }
                         collider.GetComponent<Movement>().PlayerScore += 1;
                         if (collider.GetComponent<firstPerson>().orderQuality == "Good")
                         {

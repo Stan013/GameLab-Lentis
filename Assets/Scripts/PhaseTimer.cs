@@ -21,6 +21,10 @@ public class PhaseTimer : MonoBehaviour
     [SerializeField] private GameObject guest7;
     [SerializeField] private GameObject guest8;
 
+    [SerializeField] private AudioClip orderSound;
+    [SerializeField] private AudioClip phaseSound;
+    private AudioSource audioSrc;
+
     void Start()
     {
         guest1.SetActive(false);
@@ -31,6 +35,7 @@ public class PhaseTimer : MonoBehaviour
         guest6.SetActive(false);
         guest7.SetActive(false);
         guest8.SetActive(false);
+        audioSrc = GetComponent <AudioSource>();
     }
 
     void Update ()
@@ -46,6 +51,10 @@ public class PhaseTimer : MonoBehaviour
         string seconds = (time % 60).ToString("00");
         timerText.text = (minutes + ":" + seconds);
         if(time <= 0){
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(phaseSound);
+            }
             if(phase == "Prep"){
                 phaseCount++;
                 switch(phaseCount){
@@ -79,18 +88,34 @@ public class PhaseTimer : MonoBehaviour
                 StartCoroutine(delayActive(guest2, 2));
                 if(timerText.text == "03:00"){
                     guest1.GetComponent<GuestAI>().makeOrder("Drink1");
+                    if(!audioSrc.isPlaying)
+                    {
+                        audioSrc.PlayOneShot(orderSound);
+                    }
                 }
                 if(timerText.text == "02:15"){
                     guest1.GetComponent<GuestAI>().deleteOrder();
                     guest2.GetComponent<GuestAI>().makeOrder("Food1");
+                    if(!audioSrc.isPlaying)
+                    {
+                        audioSrc.PlayOneShot(orderSound);
+                    }
                 }
                 if(timerText.text == "01:30"){
                     guest2.GetComponent<GuestAI>().deleteOrder();
                     guest1.GetComponent<GuestAI>().makeOrder("Food2");
+                    if(!audioSrc.isPlaying)
+                    {
+                        audioSrc.PlayOneShot(orderSound);
+                    }
                 }
                 if(timerText.text == "00:45"){
                     guest1.GetComponent<GuestAI>().deleteOrder();
                     guest2.GetComponent<GuestAI>().makeOrder("Drink2");
+                    if(!audioSrc.isPlaying)
+                    {
+                        audioSrc.PlayOneShot(orderSound);
+                    }
                 }
                 if(timerText.text == "00:01"){
                     guest2.GetComponent<GuestAI>().deleteOrder();
@@ -133,26 +158,50 @@ public class PhaseTimer : MonoBehaviour
         StartCoroutine(delayActive(guest4, 6));
         if(timerText.text == "03:00"){
             guest1.GetComponent<GuestAI>().makeOrder("Drink1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "02:30"){
             guest1.GetComponent<GuestAI>().deleteOrder();
             guest2.GetComponent<GuestAI>().makeOrder("Food1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "02:00"){
             guest2.GetComponent<GuestAI>().deleteOrder();
             guest3.GetComponent<GuestAI>().makeOrder("Drink2");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "01:30"){
             guest3.GetComponent<GuestAI>().deleteOrder();
             guest4.GetComponent<GuestAI>().makeOrder("Food2");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "01:00"){
             guest4.GetComponent<GuestAI>().deleteOrder();
             guest1.GetComponent<GuestAI>().makeOrder("Food3");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "00:30"){
             guest1.GetComponent<GuestAI>().deleteOrder();
             guest2.GetComponent<GuestAI>().makeOrder("Drink3");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "00:01"){
             guest2.GetComponent<GuestAI>().deleteOrder();
@@ -169,38 +218,74 @@ public class PhaseTimer : MonoBehaviour
         StartCoroutine(delayActive(guest6, 10));
         if(timerText.text == "03:00"){
             guest1.GetComponent<GuestAI>().makeOrder("Drink3");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "02:40"){
             guest1.GetComponent<GuestAI>().deleteOrder();
             guest2.GetComponent<GuestAI>().makeOrder("Food3");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "02:20"){
             guest2.GetComponent<GuestAI>().deleteOrder();
             guest3.GetComponent<GuestAI>().makeOrder("Drink1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "02:00"){
             guest3.GetComponent<GuestAI>().deleteOrder();
             guest4.GetComponent<GuestAI>().makeOrder("Food1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "01:40"){
             guest4.GetComponent<GuestAI>().deleteOrder();
             guest5.GetComponent<GuestAI>().makeOrder("Music");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "01:20"){
             guest5.GetComponent<GuestAI>().deleteOrder();
             guest6.GetComponent<GuestAI>().makeOrder("Drink2");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "01:00"){
             guest6.GetComponent<GuestAI>().deleteOrder();
             guest3.GetComponent<GuestAI>().makeOrder("Food2");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "00:40"){
             guest3.GetComponent<GuestAI>().deleteOrder();
             guest4.GetComponent<GuestAI>().makeOrder("Food1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "00:20"){
             guest4.GetComponent<GuestAI>().deleteOrder();
             guest1.GetComponent<GuestAI>().makeOrder("Drink1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "00:01"){
             guest1.GetComponent<GuestAI>().deleteOrder();
@@ -219,50 +304,98 @@ public class PhaseTimer : MonoBehaviour
         StartCoroutine(delayActive(guest8, 14));
         if(timerText.text == "03:00"){
             guest1.GetComponent<GuestAI>().makeOrder("Drink3");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "02:45"){
             guest1.GetComponent<GuestAI>().deleteOrder();
             guest2.GetComponent<GuestAI>().makeOrder("Food3");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "02:30"){
             guest2.GetComponent<GuestAI>().deleteOrder();
             guest3.GetComponent<GuestAI>().makeOrder("Drink1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "02:15"){
             guest3.GetComponent<GuestAI>().deleteOrder();
             guest4.GetComponent<GuestAI>().makeOrder("Food1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "02:00"){
             guest4.GetComponent<GuestAI>().deleteOrder();
             guest5.GetComponent<GuestAI>().makeOrder("Music");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "01:45"){
             guest5.GetComponent<GuestAI>().deleteOrder();
             guest6.GetComponent<GuestAI>().makeOrder("Drink2");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "01:30"){
             guest6.GetComponent<GuestAI>().deleteOrder();
             guest7.GetComponent<GuestAI>().makeOrder("Food2");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "01:15"){
             guest7.GetComponent<GuestAI>().deleteOrder();
             guest8.GetComponent<GuestAI>().makeOrder("Food1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "01:00"){
             guest8.GetComponent<GuestAI>().deleteOrder();
             guest1.GetComponent<GuestAI>().makeOrder("Drink1");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "00:45"){
             guest1.GetComponent<GuestAI>().deleteOrder();
             guest4.GetComponent<GuestAI>().makeOrder("Drink3");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "00:30"){
             guest4.GetComponent<GuestAI>().deleteOrder();
             guest5.GetComponent<GuestAI>().makeOrder("Music");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "00:15"){
             guest5.GetComponent<GuestAI>().deleteOrder();
             guest8.GetComponent<GuestAI>().makeOrder("Food3");
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(orderSound);
+            }
         }
         if(timerText.text == "00:01"){
             guest8.GetComponent<GuestAI>().deleteOrder();

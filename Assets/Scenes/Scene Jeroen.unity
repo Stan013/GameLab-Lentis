@@ -10185,6 +10185,8 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: 0
   addEnergy: 2
+  activitySound: {fileID: 0}
+  interacting: 0
 --- !u!65 &515375687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13095,6 +13097,8 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: -1
   addEnergy: 1
+  activitySound: {fileID: 0}
+  interacting: 0
 --- !u!65 &615975749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14476,6 +14480,9 @@ MonoBehaviour:
   firstObject: {fileID: 1190562174}
   secondObject: {fileID: 153713730}
   thirdObject: {fileID: 1106931944}
+  colaBottle: {fileID: 0}
+  fristiBottle: {fileID: 0}
+  appleBottle: {fileID: 0}
   Cakes: {fileID: 228281232}
   Drinks: {fileID: 1745068605}
   drink1: {fileID: 590236690}
@@ -14496,6 +14503,8 @@ MonoBehaviour:
     type: 3}
   thisCam: {fileID: 844413921}
   selectedObj: 1
+  outlineShade: {fileID: 0}
+  standardShade: {fileID: 0}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -18390,6 +18399,9 @@ MonoBehaviour:
   firstObject: {fileID: 1153690241}
   secondObject: {fileID: 1526087032}
   thirdObject: {fileID: 1002545967}
+  colaBottle: {fileID: 0}
+  fristiBottle: {fileID: 0}
+  appleBottle: {fileID: 0}
   Cakes: {fileID: 1758138613}
   Drinks: {fileID: 639740628}
   drink1: {fileID: 2063489739}
@@ -18410,6 +18422,8 @@ MonoBehaviour:
     type: 3}
   thisCam: {fileID: 537595112}
   selectedObj: 1
+  outlineShade: {fileID: 0}
+  standardShade: {fileID: 0}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -32661,6 +32675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaf71fce04542b4eb75a37afd5bb5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!4 &1480883600
 Transform:
   m_ObjectHideFlags: 0
@@ -35419,6 +35434,9 @@ MonoBehaviour:
   firstObject: {fileID: 323175442}
   secondObject: {fileID: 438381221}
   thirdObject: {fileID: 365937866}
+  colaBottle: {fileID: 0}
+  fristiBottle: {fileID: 0}
+  appleBottle: {fileID: 0}
   Cakes: {fileID: 2116274026}
   Drinks: {fileID: 1391140736}
   drink1: {fileID: 433097860}
@@ -35439,6 +35457,8 @@ MonoBehaviour:
     type: 3}
   thisCam: {fileID: 4223966}
   selectedObj: 1
+  outlineShade: {fileID: 0}
+  standardShade: {fileID: 0}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -38678,6 +38698,8 @@ MonoBehaviour:
   addSad: -2
   addAnxiety: 0
   addEnergy: 2
+  activitySound: {fileID: 0}
+  interacting: 0
 --- !u!95 &1759742736
 Animator:
   serializedVersion: 3
@@ -38852,6 +38874,8 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: 0
   addEnergy: -1
+  activitySound: {fileID: 0}
+  interacting: 0
 --- !u!65 &1768603311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45498,6 +45522,9 @@ MonoBehaviour:
   firstObject: {fileID: 1374366643}
   secondObject: {fileID: 698245541}
   thirdObject: {fileID: 1924022903}
+  colaBottle: {fileID: 0}
+  fristiBottle: {fileID: 0}
+  appleBottle: {fileID: 0}
   Cakes: {fileID: 311884936}
   Drinks: {fileID: 1241340577}
   drink1: {fileID: 1199411769}
@@ -45518,6 +45545,8 @@ MonoBehaviour:
     type: 3}
   thisCam: {fileID: 1985788210}
   selectedObj: 1
+  outlineShade: {fileID: 0}
+  standardShade: {fileID: 0}
   FinalValue: 0
   selectedFood: {fileID: 0}
   movement: {fileID: 0}
@@ -46677,6 +46706,8 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: -1
   addEnergy: 2
+  activitySound: {fileID: 8300000, guid: cdb75cfff5a8b074cbfe037cbadfb333, type: 3}
+  interacting: 0
 --- !u!65 &2078636199
 BoxCollider:
   m_ObjectHideFlags: 0
