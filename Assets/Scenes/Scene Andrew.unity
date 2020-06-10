@@ -322,9 +322,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasObj: {fileID: 28987402}
+  smallSpriteObj: {fileID: 0}
   showBars: 0
   images: []
   sprites: []
+  smallSprites: []
   activateButton: Fire2P2
 --- !u!114 &28987404
 MonoBehaviour:
@@ -1012,9 +1014,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasObj: {fileID: 68473563}
+  smallSpriteObj: {fileID: 0}
   showBars: 0
   images: []
   sprites: []
+  smallSprites: []
   activateButton: Fire2P3
 --- !u!114 &68473565
 MonoBehaviour:
@@ -2500,6 +2504,83 @@ Transform:
   m_Father: {fileID: 546451787}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &154090239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154090240}
+  - component: {fileID: 154090242}
+  - component: {fileID: 154090241}
+  m_Layer: 0
+  m_Name: Cube.012 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &154090240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154090239}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 31.2, y: 1.4618647, z: 0.35274532}
+  m_LocalScale: {x: 125.42716, y: 365.97437, z: 122.75766}
+  m_Children: []
+  m_Father: {fileID: 1067657566}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &154090241
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154090239}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100004, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &154090242
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154090239}
+  m_Mesh: {fileID: 4300074, guid: 3545e38a022695b4c9d796467745064a, type: 3}
 --- !u!1 &156203117
 GameObject:
   m_ObjectHideFlags: 0
@@ -6889,6 +6970,10 @@ MonoBehaviour:
   addSad: -2
   addAnxiety: 0
   addEnergy: 2
+  activitySound: {fileID: 0}
+  progressSound: {fileID: 0}
+  pointSound: {fileID: 0}
+  interacting: 0
 --- !u!95 &648509931
 Animator:
   serializedVersion: 3
@@ -8116,6 +8201,7 @@ MonoBehaviour:
   speed: 1
   phase: {fileID: 0}
   orderWanted: {fileID: 0}
+  pointSound: {fileID: 0}
   musicOn: 0
 --- !u!95 &772044238
 Animator:
@@ -11208,6 +11294,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064882988}
   m_CullTransparentMesh: 0
+--- !u!4 &1067657566 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1067791298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1067791298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11274,6 +11366,42 @@ PrefabInstance:
     - target: {fileID: 400024, guid: 3545e38a022695b4c9d796467745064a, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.4505
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8732
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6975
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6975
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6975
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400028, guid: 3545e38a022695b4c9d796467745064a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2300050, guid: 3545e38a022695b4c9d796467745064a, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11839,7 +11967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 2.588
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11879,15 +12007,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.097620316
+      value: 1.4576665
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.097620316
+      value: 1.4576665
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.097620316
+      value: 1.4576665
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -14518,6 +14646,10 @@ MonoBehaviour:
   addSad: 0
   addAnxiety: 0
   addEnergy: -1
+  activitySound: {fileID: 0}
+  progressSound: {fileID: 0}
+  pointSound: {fileID: 0}
+  interacting: 0
 --- !u!65 &1424597798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14713,7 +14845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 2.595
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14753,15 +14885,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.097620316
+      value: 1.4246709
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.097620316
+      value: 1.4246709
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.097620316
+      value: 1.4246709
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15013,9 +15145,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasObj: {fileID: 1492036751}
+  smallSpriteObj: {fileID: 0}
   showBars: 0
   images: []
   sprites: []
+  smallSprites: []
   activateButton: Fire2P4
 --- !u!114 &1492036753
 MonoBehaviour:
@@ -16244,7 +16378,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.5
+      scalar: 3.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -21009,9 +21143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasObj: {fileID: 1640213843}
+  smallSpriteObj: {fileID: 0}
   showBars: 0
   images: []
   sprites: []
+  smallSprites: []
   activateButton: Fire2P1
 --- !u!114 &1640213845
 MonoBehaviour:
@@ -22061,7 +22197,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.5
+      scalar: 3.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -22383,7 +22519,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.01
+      scalar: 0.05
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -22642,7 +22778,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.2
+      scalar: 1.5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -27892,7 +28028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 2.586
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27932,15 +28068,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.097620316
+      value: 1.9153106
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.097620316
+      value: 1.9153106
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.097620316
+      value: 1.9153106
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: f3fdb57ea9dbcf546bbb96b70f240889, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -28019,6 +28155,7 @@ MonoBehaviour:
   speed: 1
   phase: {fileID: 0}
   orderWanted: {fileID: 0}
+  pointSound: {fileID: 0}
   musicOn: 0
 --- !u!95 &1943549472
 Animator:
@@ -28312,6 +28449,8 @@ MonoBehaviour:
   guest6: {fileID: 0}
   guest7: {fileID: 0}
   guest8: {fileID: 0}
+  orderSound: {fileID: 0}
+  phaseSound: {fileID: 0}
 --- !u!4 &1986175584
 Transform:
   m_ObjectHideFlags: 0
@@ -28616,9 +28755,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasObj: {fileID: 1640213843}
+  smallSpriteObj: {fileID: 0}
   showBars: 0
   images: []
   sprites: []
+  smallSprites: []
   activateButton: Fire2P1
 --- !u!114 &2018365769
 MonoBehaviour:
