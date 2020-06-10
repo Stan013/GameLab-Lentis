@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class EnableDisable : MonoBehaviour
 {
     public GameObject canvasObj;
+    public GameObject smallSpriteObj;
     public bool showBars;
     public Image[] images;
     public SpriteRenderer[] sprites;
+    public SpriteRenderer[] smallSprites;
     public string activateButton;
     // Start is called before the first frame update
 
@@ -17,6 +19,7 @@ public class EnableDisable : MonoBehaviour
     {
         images = canvasObj.GetComponentsInChildren<Image>();
         sprites = canvasObj.GetComponentsInChildren<SpriteRenderer>();
+        smallSprites = smallSpriteObj.GetComponentsInChildren<SpriteRenderer>();
        // showBars = false;
     }
 
@@ -34,6 +37,10 @@ public class EnableDisable : MonoBehaviour
             foreach (SpriteRenderer spriteRD in sprites)
             {
                 spriteRD.enabled = true;
+            }
+            foreach (SpriteRenderer sprites in smallSprites)
+            {
+                sprites.enabled = false;
             }
             this.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
             this.GetComponent<Canvas>().worldCamera = Camera.current;
@@ -60,6 +67,10 @@ public class EnableDisable : MonoBehaviour
                 {
                     spriteRD.enabled = false;
                 }
+                foreach (SpriteRenderer sprites in smallSprites)
+                {
+                    sprites.enabled = true;
+                }
             }
             if (showBars == true)
             {
@@ -70,6 +81,10 @@ public class EnableDisable : MonoBehaviour
                 foreach (SpriteRenderer spriteRD in sprites)
                 {
                     spriteRD.enabled = true;
+                }
+                foreach (SpriteRenderer sprites in smallSprites)
+                {
+                    sprites.enabled = false;
                 }
             }
         }
