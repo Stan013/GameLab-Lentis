@@ -125,23 +125,16 @@ public class firstPerson : MonoBehaviour
             }
             if (Input.GetButtonDown(activateFirstPerson))
             {
-                if (thisCam.isActiveAndEnabled)
-                {
-                    thisCam.enabled = false;
-                    movement.enabled = true;
-                }
-                else
-                {
+
                     thisCam.enabled = true;
                     movement.enabled = false;
-                    for (int i = 0; i < randomEmotion.Count; i++)
-                    {
-                        RandomizeEmotions temp = randomEmotion[i];
-                        int randomIndex = Random.Range(i, randomEmotion.Count);
-                        randomEmotion[i] = randomEmotion[randomIndex];
-                        randomEmotion[randomIndex] = temp;
-                        randomEmotion[i]();
-                    }
+                for (int i = 0; i < randomEmotion.Count; i++)
+                {
+                    RandomizeEmotions temp = randomEmotion[i];
+                    int randomIndex = Random.Range(i, randomEmotion.Count);
+                    randomEmotion[i] = randomEmotion[randomIndex];
+                    randomEmotion[randomIndex] = temp;
+                    randomEmotion[i]();
                 }
             }
         }

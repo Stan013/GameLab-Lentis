@@ -29,54 +29,60 @@ public class Activity : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && Input.GetButton(other.GetComponent<Movement>().activityButton) && amountOfPlayers == maxPlayers)
+        if (other.gameObject.tag == "Player" && amountOfPlayers == maxPlayers)
         {
-            if (this.gameObject.GetComponent<Animator>() != null && this.gameObject.GetComponent<Animator>().enabled == true)
+           
+            if(Input.GetButton(other.GetComponent<Movement>().activityButton))
             {
-                this.gameObject.GetComponent<Animator>().SetBool("Collision", true);
-            }
-            other.GetComponent<Movement>().button.enabled = false;
-            if (time <= timeAMt)
-            {
-                if(!audioSrc.isPlaying)
+                if (this.gameObject.GetComponent<Animator>() != null && this.gameObject.GetComponent<Animator>().enabled == true)
                 {
-                    if(progressSound != null)
+                    this.gameObject.GetComponent<Animator>().SetBool("Collision", true);
+                }
+                other.GetComponent<Movement>().button.enabled = false;
+                if (time <= timeAMt)
+                {
+                    if (!audioSrc.isPlaying)
                     {
-                        audioSrc.PlayOneShot(progressSound);
+                        if (progressSound != null)
+                        {
+                            audioSrc.PlayOneShot(progressSound);
+                        }
+                        if (activitySound != null)
+                        {
+                            audioSrc.PlayOneShot(activitySound);
+                        }
                     }
-                    if(activitySound != null)
+                    time += Time.deltaTime;
+                    other.gameObject.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
+                    Debug.Log(time);
+                }
+                if (time >= timeAMt)
+                {
+                    time = 0;
+                    if (!audioSrc.isPlaying)
                     {
-                        audioSrc.PlayOneShot(activitySound);
+                        if (pointSound != null)
+                        {
+                            audioSrc.PlayOneShot(pointSound);
+                        }
+                    }
+                    foreach (Movement stats in targets.Select(t => t.GetComponent<Movement>()))
+                    {
+                        stats.Happiness += addHappy;
+                        stats.Anger += addAnger;
+                        stats.Anxiety += addAnxiety;
+                        stats.Sadness += addSad;
+                        stats.Energy += addEnergy;
                     }
                 }
-                time += Time.deltaTime;
-                other.gameObject.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
-                Debug.Log(time);
             }
-            if(time >= timeAMt)
+            else
             {
                 time = 0;
-                if(!audioSrc.isPlaying)
-                {
-                    if(pointSound != null)
-                    {
-                        audioSrc.PlayOneShot(pointSound);
-                    }
-                }
-                foreach (Movement stats in targets.Select(t => t.GetComponent<Movement>()))
-                {
-                    stats.Happiness+= addHappy;
-                    stats.Anger += addAnger;
-                    stats.Anxiety += addAnxiety;
-                    stats.Sadness += addSad;
-                    stats.Energy += addEnergy;
-                }
+                other.GetComponent<Movement>().button.enabled = true;
+                audioSrc.Stop();
             }
-        }
-        else
-        {
-            time = 0;
-        }
+        } 
     }
 
     private void OnTriggerEnter(Collider other)
