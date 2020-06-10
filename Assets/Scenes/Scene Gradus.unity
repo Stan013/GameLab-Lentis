@@ -1128,10 +1128,10 @@ MonoBehaviour:
   targets: []
   timeAMt: 5
   addHappy: 0
-  addAnger: -2
-  addSad: -1
+  addAnger: -20
+  addSad: -10
   addAnxiety: 0
-  addEnergy: -1
+  addEnergy: -10
   activitySound: {fileID: 8300000, guid: b64359b5a039c854bb5dca20fdf542cc, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
   pointSound: {fileID: 0}
@@ -2618,8 +2618,8 @@ MonoBehaviour:
   colaBottle: {fileID: 968129084}
   fristiBottle: {fileID: 1170993926}
   appleBottle: {fileID: 1389016957}
-  Cakes: {fileID: 2075584888}
-  Drinks: {fileID: 1309702654}
+  Cakes: {fileID: 683051435}
+  Drinks: {fileID: 1277563886}
   drink1: {fileID: 239543746}
   drink2: {fileID: 646060635}
   drink3: {fileID: 1762681290}
@@ -9460,10 +9460,10 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 1
+  addHappy: 10
   addAnger: 0
-  addSad: -1
-  addAnxiety: -1
+  addSad: -10
+  addAnxiety: -10
   addEnergy: 0
   activitySound: {fileID: 8300000, guid: d387ff34f4d44de43976cbdbefcadba4, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
@@ -15390,9 +15390,9 @@ MonoBehaviour:
   timeAMt: 5
   addHappy: 0
   addAnger: 0
-  addSad: -2
-  addAnxiety: -1
-  addEnergy: 2
+  addSad: -20
+  addAnxiety: -10
+  addEnergy: 20
   activitySound: {fileID: 8300000, guid: edf51b7701d88d14da7081dc17937ac4, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
   pointSound: {fileID: 0}
@@ -23470,10 +23470,10 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 1
+  addHappy: 10
   addAnger: 0
-  addSad: -1
-  addAnxiety: -1
+  addSad: -10
+  addAnxiety: -10
   addEnergy: 0
   activitySound: {fileID: 8300000, guid: d387ff34f4d44de43976cbdbefcadba4, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
@@ -23873,10 +23873,10 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 1
+  addHappy: 10
   addAnger: 0
-  addSad: -1
-  addAnxiety: -1
+  addSad: -10
+  addAnxiety: -10
   addEnergy: 0
   activitySound: {fileID: 8300000, guid: d387ff34f4d44de43976cbdbefcadba4, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
@@ -27589,10 +27589,10 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 1
+  addHappy: 10
   addAnger: 0
-  addSad: -1
-  addAnxiety: -1
+  addSad: -10
+  addAnxiety: -10
   addEnergy: 0
   activitySound: {fileID: 8300000, guid: d387ff34f4d44de43976cbdbefcadba4, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
@@ -33632,10 +33632,10 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 1
+  addHappy: 10
   addAnger: 0
-  addSad: -1
-  addAnxiety: -1
+  addSad: -10
+  addAnxiety: -10
   addEnergy: 0
   activitySound: {fileID: 8300000, guid: d387ff34f4d44de43976cbdbefcadba4, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
@@ -38158,10 +38158,10 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 1
+  addHappy: 10
   addAnger: 0
-  addSad: -1
-  addAnxiety: -1
+  addSad: -10
+  addAnxiety: -10
   addEnergy: 0
   activitySound: {fileID: 8300000, guid: d387ff34f4d44de43976cbdbefcadba4, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
@@ -39671,11 +39671,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  Sadness: -90
-  Happiness: 76
-  Anxiety: -70
-  Anger: 60
-  Energy: -24
+  Sadness: 0
+  Happiness: 0
+  Anxiety: 0
+  Anger: 0
+  Energy: 0
   button: {fileID: 1257468116}
   activitytimer: {fileID: 249946932}
   activityButton: 
@@ -39753,8 +39753,8 @@ MonoBehaviour:
   colaBottle: {fileID: 822468207}
   fristiBottle: {fileID: 1106790959}
   appleBottle: {fileID: 1379750600}
-  Cakes: {fileID: 2075584888}
-  Drinks: {fileID: 1309702654}
+  Cakes: {fileID: 129402820}
+  Drinks: {fileID: 1104711324}
   drink1: {fileID: 36644970}
   drink2: {fileID: 519979179}
   drink3: {fileID: 1959772482}
@@ -41007,10 +41007,10 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 1
+  addHappy: 10
   addAnger: 0
-  addSad: -1
-  addAnxiety: -1
+  addSad: -10
+  addAnxiety: -10
   addEnergy: 0
   activitySound: {fileID: 8300000, guid: d387ff34f4d44de43976cbdbefcadba4, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
@@ -46789,10 +46789,10 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 1
+  addHappy: 10
   addAnger: 0
-  addSad: -1
-  addAnxiety: -1
+  addSad: -10
+  addAnxiety: -10
   addEnergy: 0
   activitySound: {fileID: 8300000, guid: d387ff34f4d44de43976cbdbefcadba4, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
@@ -48802,10 +48802,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: 1
   Sadness: 0
-  Happiness: 54
-  Anxiety: -19
+  Happiness: 0
+  Anxiety: 0
   Anger: 0
-  Energy: -56
+  Energy: 0
   button: {fileID: 988622320}
   activitytimer: {fileID: 1100364496}
   activityButton: 
@@ -48883,8 +48883,8 @@ MonoBehaviour:
   colaBottle: {fileID: 691151967}
   fristiBottle: {fileID: 86999360}
   appleBottle: {fileID: 72246134}
-  Cakes: {fileID: 2075584888}
-  Drinks: {fileID: 1309702654}
+  Cakes: {fileID: 763622571}
+  Drinks: {fileID: 1977629650}
   drink1: {fileID: 209746569}
   drink2: {fileID: 730002655}
   drink3: {fileID: 1194269570}
@@ -49779,11 +49779,11 @@ MonoBehaviour:
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
-  addHappy: 1
-  addAnger: -1
+  addHappy: 10
+  addAnger: -10
   addSad: 0
   addAnxiety: 0
-  addEnergy: -1
+  addEnergy: -10
   activitySound: {fileID: 8300000, guid: 107ff2cf7ec344b44b909fa0d7edd4ee, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
   pointSound: {fileID: 0}
@@ -50985,10 +50985,10 @@ MonoBehaviour:
   targets: []
   timeAMt: 5
   addHappy: 0
-  addAnger: -1
+  addAnger: -10
   addSad: 0
-  addAnxiety: -2
-  addEnergy: 1
+  addAnxiety: -20
+  addEnergy: 10
   activitySound: {fileID: 8300000, guid: 107ff2cf7ec344b44b909fa0d7edd4ee, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
   pointSound: {fileID: 0}
@@ -51798,7 +51798,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1721846791}
-  - component: {fileID: 1721846793}
   - component: {fileID: 1721846792}
   - component: {fileID: 1721846794}
   - component: {fileID: 1721846795}
@@ -51840,31 +51839,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.012182073, y: 0.01738478, z: 0.0077998405}
   m_Center: {x: 0.003696009, y: 0.00065896986, z: -0.0027881097}
---- !u!114 &1721846793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721846790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67c428b190be354c84be72adc7a87ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxPlayers: 1
-  amountOfPlayers: 0
-  targets: []
-  timeAMt: 5
-  addHappy: 0
-  addAnger: -1
-  addSad: 0
-  addAnxiety: -1
-  addEnergy: 1
-  activitySound: {fileID: 0}
-  progressSound: {fileID: 0}
-  pointSound: {fileID: 0}
-  interacting: 0
 --- !u!114 &1721846794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51882,10 +51856,10 @@ MonoBehaviour:
   targets: []
   timeAMt: 5
   addHappy: 0
-  addAnger: -1
+  addAnger: -10
   addSad: 0
-  addAnxiety: -1
-  addEnergy: 1
+  addAnxiety: -10
+  addEnergy: 10
   activitySound: {fileID: 8300000, guid: 8ce79d517f19c264c8355360ec737c80, type: 3}
   progressSound: {fileID: 8300000, guid: 6f9e7bae3b7e00b42abc7f27164fd6ce, type: 3}
   pointSound: {fileID: 0}
@@ -60170,8 +60144,8 @@ MonoBehaviour:
   colaBottle: {fileID: 1432560915}
   fristiBottle: {fileID: 80827095}
   appleBottle: {fileID: 1973568214}
-  Cakes: {fileID: 2075584888}
-  Drinks: {fileID: 1309702654}
+  Cakes: {fileID: 998001658}
+  Drinks: {fileID: 1841724062}
   drink1: {fileID: 673136861}
   drink2: {fileID: 1498315328}
   drink3: {fileID: 1406961935}
