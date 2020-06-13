@@ -9347,9 +9347,9 @@ MonoBehaviour:
   - {fileID: 641453267}
   speed: 1
   phase: {fileID: 825993955}
-  orderWanted: {fileID: 0}
   pointSound: {fileID: 0}
   musicOn: 0
+  animator: {fileID: 0}
 --- !u!4 &296662597
 Transform:
   m_ObjectHideFlags: 0
@@ -23357,9 +23357,9 @@ MonoBehaviour:
   - {fileID: 1235091625}
   speed: 1
   phase: {fileID: 825993955}
-  orderWanted: {fileID: 0}
   pointSound: {fileID: 0}
   musicOn: 0
+  animator: {fileID: 0}
 --- !u!4 &734480692
 Transform:
   m_ObjectHideFlags: 0
@@ -23760,9 +23760,9 @@ MonoBehaviour:
   - {fileID: 1919718193}
   speed: 1
   phase: {fileID: 825993955}
-  orderWanted: {fileID: 0}
   pointSound: {fileID: 0}
   musicOn: 0
+  animator: {fileID: 0}
 --- !u!4 &736454515
 Transform:
   m_ObjectHideFlags: 0
@@ -25248,9 +25248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 210
-  resetTime: 210
   phase: WorkWave3
-  phaseCount: 0
   timerText: {fileID: 1965849133}
   guest1: {fileID: 919425084}
   guest2: {fileID: 1570975851}
@@ -25260,6 +25258,8 @@ MonoBehaviour:
   guest6: {fileID: 296662593}
   guest7: {fileID: 1286983244}
   guest8: {fileID: 1148948608}
+  guest9: {fileID: 0}
+  guest10: {fileID: 0}
   orderSound: {fileID: 8300000, guid: c1fe160f9f68f7d44a67a4a5d3015276, type: 3}
   phaseSound: {fileID: 8300000, guid: 8232e19efff9b5a408e19cd18c4a7652, type: 3}
 --- !u!4 &825993956
@@ -25288,8 +25288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2668e96be0754b40967eb4c9298ccf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  center: {x: -2.02, y: 2.6, z: -2.47}
-  size: {x: 0.7, y: 0, z: 2.84}
+  center: {x: -2.94, y: 2.55, z: -2.09}
+  size: {x: 0.77, y: 0, z: 0.81}
   platePrefab: {fileID: 8114460031514609245, guid: c05b0b9629ae01a458dceab30743d4fb,
     type: 3}
   amountofPlates: 0
@@ -27477,9 +27477,9 @@ MonoBehaviour:
   - {fileID: 478296766}
   speed: 1
   phase: {fileID: 825993955}
-  orderWanted: {fileID: 0}
   pointSound: {fileID: 0}
   musicOn: 0
+  animator: {fileID: 0}
 --- !u!4 &919425088
 Transform:
   m_ObjectHideFlags: 0
@@ -33539,9 +33539,9 @@ MonoBehaviour:
   - {fileID: 1988273057}
   speed: 1
   phase: {fileID: 825993955}
-  orderWanted: {fileID: 0}
   pointSound: {fileID: 0}
   musicOn: 0
+  animator: {fileID: 0}
 --- !u!4 &1148948612
 Transform:
   m_ObjectHideFlags: 0
@@ -38065,9 +38065,9 @@ MonoBehaviour:
   - {fileID: 928791716}
   speed: 1
   phase: {fileID: 825993955}
-  orderWanted: {fileID: 0}
   pointSound: {fileID: 0}
   musicOn: 0
+  animator: {fileID: 0}
 --- !u!4 &1286983248
 Transform:
   m_ObjectHideFlags: 0
@@ -40914,9 +40914,9 @@ MonoBehaviour:
   - {fileID: 1053170240}
   speed: 1
   phase: {fileID: 825993955}
-  orderWanted: {fileID: 0}
   pointSound: {fileID: 0}
   musicOn: 0
+  animator: {fileID: 0}
 --- !u!4 &1365981363
 Transform:
   m_ObjectHideFlags: 0
@@ -46801,9 +46801,9 @@ MonoBehaviour:
   - {fileID: 1260539716}
   speed: 1
   phase: {fileID: 825993955}
-  orderWanted: {fileID: 0}
   pointSound: {fileID: 0}
   musicOn: 0
+  animator: {fileID: 0}
 --- !u!4 &1570975855
 Transform:
   m_ObjectHideFlags: 0
@@ -58619,7 +58619,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaf71fce04542b4eb75a37afd5bb5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phase: {fileID: 0}
   scoreText: {fileID: 255295352}
+  phaseText: {fileID: 0}
 --- !u!4 &1994437802
 Transform:
   m_ObjectHideFlags: 0
