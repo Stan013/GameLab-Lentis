@@ -34,6 +34,7 @@ public class Activity : MonoBehaviour
            
             if(Input.GetButton(other.GetComponent<Movement>().activityButton))
             {
+                interacting = true;
                 if (this.gameObject.GetComponent<Animator>() != null && this.gameObject.GetComponent<Animator>().enabled == true)
                 {
                     this.gameObject.GetComponent<Animator>().SetBool("Collision", true);
@@ -81,6 +82,7 @@ public class Activity : MonoBehaviour
                 time = 0;
                 other.GetComponent<Movement>().button.enabled = true;
                 audioSrc.Stop();
+                interacting = false;
             }
         } 
     }
