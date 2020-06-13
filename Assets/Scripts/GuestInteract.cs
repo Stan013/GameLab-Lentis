@@ -13,7 +13,12 @@ public class GuestInteract : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private PhaseTimer phase;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject ring;
     
+    void Start(){
+        ring.SetActive(false);
+    }
+
     void Update () {
         if(phase.phase != "Prep"){
             Move();
@@ -25,6 +30,7 @@ public class GuestInteract : MonoBehaviour
     void Move(){
         if(currentWayPoint == wayPointList.Length){
             animator.SetBool("Move", false);
+            ring.SetActive(true);
         }else{
             animator.SetBool("Move", true);
         }
@@ -47,6 +53,7 @@ public class GuestInteract : MonoBehaviour
 
     void MoveBack(){
         animator.SetBool("Move", true);
+        ring.SetActive(false);
         if(currentWayPoint2 < tempArray.Length){
             if(targetWayPoint2 == null){
                 targetWayPoint2 = tempArray[currentWayPoint2];
