@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class PhaseTimer : MonoBehaviour
 {
     [SerializeField] private float time;
-    private float resetTime;
+    private float resetTime = 210;
     public string phase;
-    private float phaseCount = 0;
+    [SerializeField] private float phaseCount = 0;
     [SerializeField] private Text timerText;
 
     [SerializeField] private GameObject guest1;
@@ -37,6 +37,8 @@ public class PhaseTimer : MonoBehaviour
         guest6.SetActive(false);
         guest7.SetActive(false);
         guest8.SetActive(false);
+        guest9.SetActive(false);
+        guest10.SetActive(false);
         audioSrc = GetComponent <AudioSource>();
     }
 
@@ -78,8 +80,20 @@ public class PhaseTimer : MonoBehaviour
             }
             time = resetTime;
         }
-        if(phase == "Prep" && phaseCount == 5){//Goes to end
+        if(phase == "Prep" && phaseCount == 5){
             SceneManager.LoadScene("Ending");
+        }
+        if(phase == "Prep" && timerText.text == "03:00"){
+            guest1.SetActive(false);
+            guest2.SetActive(false);
+            guest3.SetActive(false);
+            guest4.SetActive(false);
+            guest5.SetActive(false);
+            guest6.SetActive(false);
+            guest7.SetActive(false);
+            guest8.SetActive(false);
+            guest9.SetActive(false);
+            guest10.SetActive(false);
         }
     }
 
@@ -120,7 +134,7 @@ public class PhaseTimer : MonoBehaviour
                         audioSrc.PlayOneShot(orderSound);
                     }
                 }
-                if(timerText.text == "00:01"){
+                if(timerText.text == "00:00"){
                     guest1.GetComponent<GuestAI>().deleteOrder();
                     guest2.GetComponent<GuestAI>().deleteOrder();
                 }
@@ -133,18 +147,6 @@ public class PhaseTimer : MonoBehaviour
             break;
             case "WorkWave3":
                 MakeWave3();
-            break;
-            default:
-                if(timerText.text == "03:00"){
-                    guest1.SetActive(false);
-                    guest2.SetActive(false);
-                    guest3.SetActive(false);
-                    guest4.SetActive(false);
-                    guest5.SetActive(false);
-                    guest6.SetActive(false);
-                    guest7.SetActive(false);
-                    guest8.SetActive(false);
-                }
             break;
         }   
     }
@@ -210,7 +212,7 @@ public class PhaseTimer : MonoBehaviour
         if(timerText.text == "00:30"){
             guest4.GetComponent<GuestAI>().deleteOrder();
         }
-        if(timerText.text == "00:01"){
+        if(timerText.text == "00:00"){
             guest1.GetComponent<GuestAI>().deleteOrder();
             guest2.GetComponent<GuestAI>().deleteOrder();
         }
@@ -298,7 +300,7 @@ public class PhaseTimer : MonoBehaviour
         if(timerText.text == "00:20"){
             guest3.GetComponent<GuestAI>().deleteOrder();
         }
-        if(timerText.text == "00:01"){
+        if(timerText.text == "00:00"){
             guest4.GetComponent<GuestAI>().deleteOrder();
             guest4.GetComponent<GuestAI>().deleteOrder();
         }
@@ -412,10 +414,10 @@ public class PhaseTimer : MonoBehaviour
         if(timerText.text == "00:15"){
             guest4.GetComponent<GuestAI>().deleteOrder();
         }
-        if(timerText.text == "00:01"){
+        if(timerText.text == "00:00"){
             guest5.GetComponent<GuestAI>().deleteOrder();
             guest8.GetComponent<GuestAI>().deleteOrder();
-        }
+        }   
         phaseCount = 5;
     }
 }

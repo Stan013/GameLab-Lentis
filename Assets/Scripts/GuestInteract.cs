@@ -41,12 +41,13 @@ public class GuestInteract : MonoBehaviour
                 }
             }
         }
+        currentWayPoint2 = 0;
+        targetWayPoint2 = null;
     } 
 
     void MoveBack(){
         animator.SetBool("Move", true);
         if(currentWayPoint2 < tempArray.Length){
-            targetWayPoint2 = null;
             if(targetWayPoint2 == null){
                 targetWayPoint2 = tempArray[currentWayPoint2];
             }
@@ -59,5 +60,7 @@ public class GuestInteract : MonoBehaviour
                 }
             }
         }
+        currentWayPoint = 0;
+        targetWayPoint = null;
     }
 }
