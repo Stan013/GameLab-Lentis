@@ -13,10 +13,11 @@ public class GuestAI : MonoBehaviour
     Transform targetWayPoint2;
     [SerializeField] private float speed;
     [SerializeField] private PhaseTimer phase;
-    [SerializeField] private GameObject orderWanted;
+    private GameObject orderWanted;
     [SerializeField] private AudioClip pointSound;
     private AudioSource audioSrc;
     public bool musicOn = false;
+    [SerializeField] private Animator animator;
     
     private GameObject drink1;
     private GameObject drink2;
@@ -56,9 +57,12 @@ public class GuestAI : MonoBehaviour
     }
  
     void Move(){
-        currentWayPoint2 = 0;
-        targetWayPoint2 = null;
-        if(currentWayPoint < wayPointList.Length){
+        if(currentWayPoint == wayPointList.Length){
+            animator.SetBool("Move", false);
+        }else{
+            animator.SetBool("Move", true);
+        }
+        if(currentWayPoint < tempArray.Length){
             if(targetWayPoint == null){
                 targetWayPoint = wayPointList[currentWayPoint];
             }
@@ -74,9 +78,9 @@ public class GuestAI : MonoBehaviour
     } 
 
     void MoveBack(){
-        currentWayPoint = 0;
-        targetWayPoint = null;
+        animator.SetBool("Move", true);
         if(currentWayPoint2 < tempArray.Length){
+            targetWayPoint2 = null;
             if(targetWayPoint2 == null){
                 targetWayPoint2 = tempArray[currentWayPoint2];
             }
@@ -89,7 +93,6 @@ public class GuestAI : MonoBehaviour
                 }
             }
         }
-
     }
 
     public void deleteOrder()
@@ -154,6 +157,7 @@ public class GuestAI : MonoBehaviour
                         }
                     }
                     collider.GetComponent<Movement>().PlayerScore += 1;
+                    deleteOrder();
                     if(collider.GetComponent<firstPerson>().orderQuality == "Good")
                     {
                         collider.GetComponent<Movement>().PlayerScore += 1;
@@ -172,6 +176,7 @@ public class GuestAI : MonoBehaviour
                             }
                         }
                         collider.GetComponent<Movement>().PlayerScore += 1;
+                        deleteOrder();
                         if (collider.GetComponent<firstPerson>().orderQuality == "Good")
                         {
                             collider.GetComponent<Movement>().PlayerScore += 1;

@@ -37,7 +37,11 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     private static ScoreManager playerInstance;
 
+    [SerializeField] private PhaseTimer phase;
     public Text scoreText;
+    public Text phaseText;
+    private string text;
+    
     void Awake()
     {
         DontDestroyOnLoad(this);
@@ -54,6 +58,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
+        
     }
     private void Update()
     {
@@ -61,7 +66,12 @@ public class ScoreManager : MonoBehaviour
 
         // Retrieve the name of this scene.
         string sceneName = currentScene.name;
-        
+        if(phase.phase != "Prep")
+        {
+            phaseText.text = ("Guests are here");
+        }else{
+            phaseText.text = ("Look at your emotions");
+        }
 
         if (sceneName == "Scene Gradus")
         {
@@ -100,6 +110,6 @@ public class ScoreManager : MonoBehaviour
         }
 
         finalScore = Player1Score + Player2Score + Player3Score + Player4Score;
-        scoreText.text = ("Score:" + finalScore);
+        scoreText.text = ("Score: " + finalScore);
     }
 }
