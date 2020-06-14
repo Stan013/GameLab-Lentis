@@ -21,10 +21,13 @@ public class Activity : MonoBehaviour
     [SerializeField] private AudioClip pointSound;
     private AudioSource audioSrc;
     public bool interacting = false;
+    public Text text;
 
     void Start()
     {
         audioSrc = GetComponent <AudioSource>();
+        text = GetComponentInChildren<Text>();
+        text.enabled = false;
     }
 
     void OnTriggerStay(Collider other)
@@ -94,6 +97,8 @@ public class Activity : MonoBehaviour
             targets.Add(other.gameObject);
             other.GetComponent<Movement>().button.enabled = true;
             amountOfPlayers += 1;
+            text.enabled = true;
+            text.text =(amountOfPlayers + "/" + maxPlayers);
         }
     }
     void OnTriggerExit(Collider other)
@@ -102,6 +107,8 @@ public class Activity : MonoBehaviour
         {
             targets.Remove(other.gameObject);
             amountOfPlayers -= 1;
+            text.enabled = false;
+            text.text = (amountOfPlayers + "/" + maxPlayers);
             time = 0;
             other.GetComponent<Movement>().activitytimer.fillAmount = time / timeAMt;
             other.GetComponent<Movement>().button.enabled = false;
