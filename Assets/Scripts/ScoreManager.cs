@@ -52,13 +52,13 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(playerInstance.gameObject);
         }
     }
 
     private void Start()
     {
-        
+
     }
     private void Update()
     {
