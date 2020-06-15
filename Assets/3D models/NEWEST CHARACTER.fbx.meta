@@ -387,7 +387,7 @@ ModelImporter:
       name: SadIdle
       takeName: Armature|ArmatureAction.001
       firstFrame: 880
-      lastFrame: 939
+      lastFrame: 960
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
