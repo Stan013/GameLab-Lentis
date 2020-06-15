@@ -77,6 +77,48 @@ public class Activity : MonoBehaviour
                         stats.Anxiety += addAnxiety;
                         stats.Sadness += addSad;
                         stats.Energy += addEnergy;
+
+                        if (addHappy > 0)
+                        {
+                            stats.plusHappy.Play();
+                        }
+                        if (addHappy < 0)
+                        {
+                            stats.minusHappy.Play();
+                        }
+                        if (addAnxiety >= 0)
+                        {
+                            stats.plusAnxiety.Play();
+                        }
+                        if (addAnxiety < 0)
+                        {
+                            stats.minusAnxiety.Play();
+                        }
+                        if (addAnger >= 0)
+                        {
+                            stats.plusAnger.Play();
+                        }
+                        if (addAnger < 0)
+                        {
+                            stats.minusAnger.Play();
+                        }
+                        if (addSad >= 0)
+                        {
+                            stats.plusSadness.Play();
+                        }
+                        if (addSad < 0)
+                        {
+                            stats.minusSadness.Play();
+                        }
+                        if (addEnergy >= 0)
+                        {
+                            stats.plusEnergy.Play();
+                        }
+                        if (addEnergy< 0)
+                        {
+                            stats.minusEnergy.Play();
+                        }
+
                     }
                 }
             }

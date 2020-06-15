@@ -91,5 +91,6 @@ public class SpriteManager : MonoBehaviour
             energySprite.sprite = energySprites[2];
         }
 
+
     }
 }

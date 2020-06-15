@@ -37,6 +37,17 @@ public class Movement : MonoBehaviour
 
     private Movement playerInstance;
 
+
+    public ParticleSystem plusHappy;
+    public ParticleSystem minusHappy;
+    public ParticleSystem plusSadness;
+    public ParticleSystem minusSadness;
+    public ParticleSystem plusAnger;
+    public ParticleSystem minusAnger;
+    public ParticleSystem plusAnxiety;
+    public ParticleSystem minusAnxiety;
+    public ParticleSystem plusEnergy;
+    public ParticleSystem minusEnergy;
     void Start()
     {
         anim = this.GetComponent<Animator>();
