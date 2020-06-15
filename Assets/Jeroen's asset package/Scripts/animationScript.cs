@@ -46,22 +46,21 @@ public class animationScript : MonoBehaviour
                 {
                     animController.SetBool("isKicking", true);
                     GlobalsManager.Instance.goalKeep = false;
-                    playerChar.transform.position = new Vector3(-4.48f, playerChar.transform.position.y, 8.0f);
-                    playerChar.transform.rotation = new Quaternion(playerChar.transform.rotation.x, 0f, playerChar.transform.rotation.z, playerChar.transform.rotation.w);
+                    playerChar.transform.position = new Vector3(-5.324f, playerChar.transform.position.y, 8.2f);
+                    playerChar.transform.rotation = new Quaternion(playerChar.transform.rotation.x, 180f, playerChar.transform.rotation.z, playerChar.transform.rotation.w);
                 }
                 else
                 {
                     GlobalsManager.Instance.goalKeep = true;
                     animController.SetBool("isBlocking", true);
-                    playerChar.transform.position = new Vector3(-4.48f, playerChar.transform.position.y, 11f);
-                    playerChar.transform.rotation = new Quaternion(playerChar.transform.rotation.x, 180f, playerChar.transform.rotation.z, playerChar.transform.rotation.w);
-                    float blockChance = Random.Range(0f, 1f);
-                    blockChance = Mathf.Round(blockChance);
-                    if (blockChance == 1)
+                    playerChar.transform.position = new Vector3(-5.324f, playerChar.transform.position.y, 5.2f);
+                    playerChar.transform.rotation = new Quaternion(playerChar.transform.rotation.x, 0f, playerChar.transform.rotation.z, playerChar.transform.rotation.w);
+                    int blockChance = Random.Range(0, 2);
+                    if (blockChance == 0)
                     {
                         animController.SetBool("blockSuccess", true);
                     }
-                    else
+                    else if (blockChance == 1)
                     {
                         animController.SetBool("blockSuccess", false);
                     }
