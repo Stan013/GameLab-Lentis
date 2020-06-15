@@ -10,10 +10,12 @@ public class animationScript : MonoBehaviour
     [SerializeField] private GameObject soccerBall;
     [SerializeField] private Movement player;
     [SerializeField] private Camera firstPersonMode;
+    public List<GameObject> ballList;
 
     // Update is called once per frame
     void Update()
     {
+        ballList = soccerBall.GetComponent<Activity>().targets;
         if (player.Sadness < -60)
         {
             animController.SetBool("isSad", true);
@@ -38,7 +40,7 @@ public class animationScript : MonoBehaviour
         {
             animController.SetBool("isBaking", false);
         }
-        if (Input.GetButton(this.GetComponent<Movement>().activityButton) && (Vector3.Distance(playerChar.transform.position, soccerBall.transform.position) < 10)) //&& (soccerBall.GetComponent<Activity>().amountOfPlayers == 2)
+        if (Input.GetButton(this.GetComponent<Movement>().activityButton) && (Vector3.Distance(playerChar.transform.position, soccerBall.transform.position) < 10))
         {
             if (soccerBall.GetComponentInParent<Activity>().interacting == true)
             {
