@@ -12,10 +12,10 @@ public class ShowScore : MonoBehaviour
     public Text Player4Score;
     public void Start()
     {
-        FinalScoreText.text = ("TeamScore: " + ScoreManager.finalScore);
-        Player1Score.text = ("Player1Score: " + ScoreManager.Player1Score);
-        Player2Score.text = ("Player2Score: " + ScoreManager.Player2Score);
-        Player3Score.text = ("Player3Score: " + ScoreManager.Player3Score);
-        Player4Score.text = ("Player4Score: " + ScoreManager.Player4Score);
+        FinalScoreText.text = ("Team Score: " + ScoreManager.finalScore);
+        Player1Score.text = ("Speler 1 Score: " + ScoreManager.Player1Score);
+        Player2Score.text = ("Speler 2 Score: " + ScoreManager.Player2Score);
+        Player3Score.text = ("Speler 3 Score: " + ScoreManager.Player3Score);
+        Player4Score.text = ("Speler 4 Score: " + ScoreManager.Player4Score);
     }
 }
