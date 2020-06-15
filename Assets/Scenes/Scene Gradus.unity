@@ -31451,15 +31451,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8908f982b7c3bcb4b92cee9da5691507, type: 3}
       propertyPath: m_LocalScale.x
-      value: 45.221
+      value: 71.06932
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8908f982b7c3bcb4b92cee9da5691507, type: 3}
       propertyPath: m_LocalScale.y
-      value: 45.221
+      value: 71.06932
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8908f982b7c3bcb4b92cee9da5691507, type: 3}
       propertyPath: m_LocalScale.z
-      value: 45.221
+      value: 71.06932
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 8908f982b7c3bcb4b92cee9da5691507, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -37794,7 +37794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67c428b190be354c84be72adc7a87ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayers: 1
+  maxPlayers: 2
   amountOfPlayers: 0
   targets: []
   timeAMt: 5
@@ -37818,7 +37818,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.85
+  m_Radius: 1.31
   m_Height: 5.11
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 2.26}
@@ -64545,7 +64545,7 @@ Transform:
   m_GameObject: {fileID: 983190607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.057486173, y: 0.057486173, z: 0.057486173}
+  m_LocalScale: {x: 0.09769947, y: 0.09769947, z: 0.09769947}
   m_Children: []
   m_Father: {fileID: 65803967}
   m_RootOrder: 0
@@ -94778,7 +94778,7 @@ Transform:
   m_GameObject: {fileID: 1488586855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.057486173, y: 0.057486173, z: 0.057486173}
+  m_LocalScale: {x: 0.10340038, y: 0.10340038, z: 0.10340038}
   m_Children: []
   m_Father: {fileID: 911165430}
   m_RootOrder: 0
@@ -117059,10 +117059,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.74
   m_Height: 3.22
   m_Direction: 1
-  m_Center: {x: 0.05, y: 0, z: -0.62}
+  m_Center: {x: 0.05, y: -0.21, z: -0.62}
 --- !u!114 &1721846794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126363,15 +126363,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8908f982b7c3bcb4b92cee9da5691507, type: 3}
       propertyPath: m_LocalScale.x
-      value: 45.221
+      value: 76.156685
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8908f982b7c3bcb4b92cee9da5691507, type: 3}
       propertyPath: m_LocalScale.y
-      value: 45.221
+      value: 76.156685
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8908f982b7c3bcb4b92cee9da5691507, type: 3}
       propertyPath: m_LocalScale.z
-      value: 45.221
+      value: 76.156685
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 8908f982b7c3bcb4b92cee9da5691507, type: 3}
       propertyPath: m_Materials.Array.data[0]
