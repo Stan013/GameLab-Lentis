@@ -36,9 +36,9 @@ public class platesSpawning : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(20);
-            plateSpawner();
             if (amountofPlates < 5)
             {
+                plateSpawner();
                 amountofPlates += 1;
             }
             spawnPlates();
